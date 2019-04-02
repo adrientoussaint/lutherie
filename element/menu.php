@@ -10,7 +10,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto">
       <li data-name="atelier" class="nav-item active">
-        <a class="nav-link" href="#">L'ATELIER <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="?page=atelier">L'ATELIER</a>
       </li>
       <li data-name="custom" class="nav-item">
         <a class="nav-link" href="#">CUSTOM</a>
@@ -19,7 +19,7 @@
         <a class="nav-link" href="?page=shop">LE SHOP</a>
       </li>
       <li data-name="contact" class="nav-item">
-        <a class="nav-link" href="#">CONTACT</a>
+        <a class="nav-link" href="?page=contact">CONTACT</a>
       </li>
       <li data-name="instagram" class="nav-item">
         <a class="nav-link" href="#"><i class="fab fa-instagram"></i></a>

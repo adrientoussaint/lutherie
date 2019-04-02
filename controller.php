@@ -16,6 +16,23 @@ function shop()
     require('./page/shop.php');
 }
 
+
+function atelier()
+{
+    // $posts = getPosts();
+
+    require('./page/atelier.php');
+}
+
+
+
+function contact()
+{
+    // $posts = getPosts();
+
+    require('./page/contact.php');
+}
+
 // function post()
 // {
 //     $post = getPost($_GET['id']);

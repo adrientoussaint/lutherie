@@ -31,12 +31,14 @@
         </div>
       </div>
     </div>
-    <a class="carousel-control-prev carousel-control" href="#carouselExampleCaptions" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"><i class="fas fa-arrow-left"></i></span>
+	  
+    <a class=" carousel-control-prev carousel-control" href="#carouselExampleCaptions" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"><i class="fas fa-angle-left"></i></span>
       <span class="sr-only">Previous</span>
     </a>
-    <a class="carousel-control-next carousel-control" href="#carouselExampleCaptions" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"><i class="fas fa-arrow-right"></i></span>
+	  
+    <a class=" carousel-control-next carousel-control" href="#carouselExampleCaptions" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"><i class="fas fa-angle-right"></i></i></span>
       <span class="sr-only">Next</span>
     </a>
   </div>
