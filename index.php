@@ -1,16 +1,35 @@
-<?php
-
-?>
 <!DOCTYPE html>
 	<html lang="en">
 		<head>
 			<meta charset="UTF-8">
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
 			<meta http-equiv="X-UA-Compatible" content="ie=edge">
-			<title>Document</title>
-			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-			<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+			<title>Woove</title>
+			
 			<link rel="stylesheet" href="style.css">
+			
+			
+			<!--bootstrap + js -->
+			
+			<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+			<!-- autres libs -->
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" />
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+			<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+			
+			<link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+			
+			<!---------------------------------------- PROBLEME DIAPO PAGE 1------------------------------>
+			
+			<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+	
 		</head>
 		
 		
@@ -25,10 +44,14 @@
 					home();
 				}elseif($_GET['page'] == 'shop'){
 					shop();
+				}elseif($_GET['page'] == 'instrument'){
+					instrument();
 				}elseif($_GET['page'] == 'atelier'){
 					atelier();
 				}elseif($_GET['page'] == 'contact'){
 					contact();
+				}elseif($_GET['page'] == 'custom'){
+					custom();
 				}
 			}
 			else {
@@ -39,9 +62,6 @@
 		</body>
 
 		<footer>
-			<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 			
 			<script>
 				//permet de récupérer le paramètre qui est dans le barre d'url
@@ -72,9 +92,70 @@
 					}
 				  });
 
-				  $(".nav-link").on('click', function() {
-				  });
+				  $(document).ready(function(){
+					$("#message").on("click", function(){
+						$(this).height(140);
+					})
+				})
 				});
 			</script>
+			
+			
+			
+			<script>
+				// filtres shop
+				$('.portfolio-item').isotope({
+					itemSelector: '.item',
+					layoutMode: 'fitRows'
+				 });
+				 $('.portfolio-menu ul li').click(function(){
+					$('.portfolio-menu ul li').removeClass('active');
+					$(this).addClass('active');
+
+					var selector = $(this).attr('data-filter');
+					$('.portfolio-item').isotope({
+						filter:selector
+					});
+					return  false;
+				 });
+				 $(document).ready(function() {
+				 var popup_btn = $('.popup-btn');
+				 popup_btn.magnificPopup({
+				 type : 'image',
+				 gallery : {
+					enabled : true
+				 }
+				 });
+				 });
+
+			</script>
+			
+			
+			<script>
+			//FIRTRES CUSTOM
+				$(document).ready(function() {
+					$("div.bhoechie-tab-menu>div.list-group>a").click(function(e) {
+						e.preventDefault();
+						$(this).siblings('a.active').removeClass("active");
+						$(this).addClass("active");
+						var index = $(this).index();
+						$("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
+						$("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
+					});
+				});
+			</script>
+			
+			
+			<script>
+				// CHANGER TEXTE CUSTOM AVEC CHOIX
+				$('div.test').click(
+					function(){
+						$('span#radio12').text( $('.recap-corde') );
+					});
+
+			</script>
+			
+			
+			
 		</footer>
 </html>

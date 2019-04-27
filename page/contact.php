@@ -15,7 +15,7 @@
 </div>
 
 <section class="form container">
-   <form class="contact-form row">
+   <form class="contact-form row" action="" method="post">
       <div class="form-field col-lg-6">
          <input id="nom" class="input-text js-input" type="text" required>
          <label class="label" for="nom">Nom</label>
@@ -33,16 +33,18 @@
          <label class="label" for="phone">Numéro de téléphone</label>
       </div>
 	  
-	   <div class="form-field col-lg-12">
-		<div class="checkbox">
+	   <div class="form-field col-lg-12 check">
+		    <label class="label objet" for="objet">Objet du mail</label>
+			
+		   <div class="checkbox">
 			<input type="checkbox" id="devis">
 			<label for="devis">Devis</label>
 		
 			<input type="checkbox" id="informations">
 			<label for="informations">Customisation</label>
 			
-			<input type="checkbox" id="informations">
-			<label for="informations">Réservation</label>
+			<input type="checkbox" id="reservation">
+			<label for="reservation">Réservation</label>
 		
 			<input type="checkbox" id="reparation">
 			<label for="reparation">Réparation</label>
@@ -54,10 +56,9 @@
 	   
 	   
       <div class="form-field col-lg-12">
-         <input id="message" class="input-text js-input" type="text" required>
-         <label class="label" for="message">Message</label>
+		  <textarea id="message" class="input-text js-input" type="text" rows="10" required></textarea>
+         <label class="label label-message" for="message">Message</label>
       </div>
-	  
 	   
 	 
 	   
@@ -67,3 +68,6 @@
       </div>
    </form>
 </section>
+<script>
+	
+</script>

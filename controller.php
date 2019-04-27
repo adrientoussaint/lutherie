@@ -17,6 +17,14 @@ function shop()
 }
 
 
+function instrument()
+{
+    // $posts = getPosts();
+
+    require('./page/instrument.php');
+}
+
+
 function atelier()
 {
     // $posts = getPosts();
@@ -25,12 +33,18 @@ function atelier()
 }
 
 
-
 function contact()
 {
     // $posts = getPosts();
 
     require('./page/contact.php');
+}
+
+function custom()
+{
+    // $posts = getPosts();
+
+    require('./page/custom.php');
 }
 
 // function post()

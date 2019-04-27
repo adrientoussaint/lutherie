@@ -20,9 +20,6 @@
   </a>-->
 </div>
 
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2634.6458564386985!2d6.151142015667863!3d48.6740152792698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4794a27d3a147d8d%3A0xe68336bae991ace2!2s50+Rue+Georges+Clemenceau%2C+54600+Villers-l%C3%A8s-Nancy!5e0!3m2!1sfr!2sfr!4v1554209107944!5m2!1sfr!2sfr" width="1890" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
-
-
  <div class="container">
 	<div class="row  atelier">
 		<h5 class="col-12 atelier-name justify-content-center">L'ATELIER</h5>

@@ -1,4 +1,7 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-white black-brd-btm">
+<!--<nav class="navbar navbar-expand-lg navbar-light bg-white black-brd-btm">-->
+
+	
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
   <a class="navbar-brand" href="?page=home">
     <img src="/docs/4.3/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="logo">
     Ton nom d'entreprise
@@ -13,7 +16,7 @@
         <a class="nav-link" href="?page=atelier">L'ATELIER</a>
       </li>
       <li data-name="custom" class="nav-item">
-        <a class="nav-link" href="#">CUSTOM</a>
+        <a class="nav-link" href="?page=custom">CUSTOM</a>
       </li>
       <li data-name="shop" class="nav-item">
         <a class="nav-link" href="?page=shop">LE SHOP</a>

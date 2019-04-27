@@ -8,11 +8,42 @@ body{
 	margin: auto;
 }
 
+.btn{
+	border-radius:0px !important;
+}
+
+.btn-light, .btn-dark{
+    text-transform: uppercase;
+    font-weight: bold;
+	font-size: 10px !important;
+    padding: 0px 20px !important;
+	height: 30px !important;
+    line-height: 15px !important;
+}
+
+.btn-light{
+    color:black;
+	border-color: #E2D5C5;
+    background-color: #E2D5C5;
+	margin-bottom: 40px;
+
+}
+
+.btn-light:hover{
+    background-color: #C7B4A6;
+	border-color:  #C7B4A6;
+}
+
+.btn-dark:hover{
+    background-color: black;
+	border-color:  black;
+}
+
 /***********************************************************************************  MENU NAV   */
 
 .black-brd-btm{ border-bottom: 2px solid black; }
-/*
-.navbar-nav .active{ border-bottom: 2px solid black; }*/
+
+.navbar-nav .active{ border-bottom: 2px solid black; }
 
 .black-brd-tp{ border-top: 2px solid black;}
 
@@ -72,7 +103,7 @@ body{
 
 .atelier{
 	display: flex;
-	padding-top: 40px;
+	padding-top: 20px;
 }
 
 .atelier-name{
@@ -98,6 +129,81 @@ p.atelier-text{
 
 
 /***********************************************************************************  SHOP */
+
+.card-deck{margin-bottom: 50px;}
+
+.card-prix{
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.card-title{
+	font-weight: bold; 
+    font-size: 2rem;
+}
+
+.card-prix{
+	font-weight: bold; 
+    font-size: 1.6rem;
+	padding-bottom: 10px;
+}
+
+
+.card{
+	border:none !important;
+	padding:15px;
+	text-align:center;
+
+}
+
+.shop-name{
+    font-size: 2rem;
+    font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.portfolio-menu{text-align:center;}
+
+.portfolio-menu ul li{
+	display:inline-block;
+	margin:0;
+	list-style:none;
+	width : 185px !important;
+	color:black;
+	border-color: #E2D5C5 !important;
+    background-color: white !important;
+	margin-bottom: 40px;
+	text-transform: uppercase;
+    font-weight: bold;
+	font-size: 12px !important;
+    padding: 5px 20px !important;
+	height: auto !important;
+	cursor:pointer;
+	-webkit-transition:all 05s ease;
+	-moz-transition:all 05s ease;
+	-ms-transition:all 05s ease;
+	-o-transition:all 05s ease;
+	transition:all .5s ease;
+}
+
+
+ .portfolio-menu .btn:hover {
+    background-color: #E2D5C5 !important;
+	border-color:  #E2D5C5 !important ;
+}
+
+.portfolio-menu .active {
+    background-color: #E2D5C5 !important;
+	border-color:  #E2D5C5 !important ;
+}
+
+.portfolio-item .item{
+	float:left;
+	margin-bottom:10px;
+}
+
+
+/***********************************************************************************  INSTRU */
 .mx-6{
     margin-left: 4rem !important;
     margin-right: 4rem !important;
@@ -108,15 +214,6 @@ p.atelier-text{
     margin-right: 5rem !important;
 }
 
-.btn-light, .btn-dark{
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-.btn-light{
-    color:black;
-    background-color: #E2D5C5;
-}
 
 #shop{ min-height: 65vh;}
 
@@ -133,6 +230,189 @@ h5.guitar-name{
 h5.carac{ font-weight: bold; }
 
 .carac-name{ font-weight:bold; }
+
+.ligne-page-instru{ margin: auto;}
+
+
+
+
+
+/***********************************************************************************  CUSTOM */
+
+.img-filtre {
+	width: 65px;
+	height: auto;
+}
+
+.custom{
+	display: flex;
+	padding-top: 20px;
+}
+
+/*  bhoechie tab */
+div.bhoechie-tab-container{
+  z-index: 10;
+  background-color: #ffffff;
+  padding: 0 !important;
+  margin-top: 20px;
+  background-clip: padding-box;
+  opacity: 0.97;
+  filter: alpha(opacity=97);
+}
+div.bhoechie-tab-menu div.list-group{ margin-bottom: 0;}
+
+div.bhoechie-tab-menu div.list-group>a{ margin-bottom: 0;}
+
+div.bhoechie-tab-menu div.list-group>a .glyphicon,
+div.bhoechie-tab-menu div.list-group>a .fa { color: #000; }
+
+div.bhoechie-tab-menu div.list-group>a.active,
+div.bhoechie-tab-menu div.list-group>a.active .glyphicon,
+div.bhoechie-tab-menu div.list-group>a.active .fa{
+  background-color: white;
+  background-image: #5A55A3;
+  color: #000;
+}
+
+
+div.bhoechie-tab-menu div.list-group>a.active:after{
+  content: '';
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  margin-top: -13px;
+  border-bottom: 13px solid transparent;
+  border-top: 13px solid transparent;
+  border-left: 10px solid #ECE9E4;
+	transform: rotate(180deg);
+    margin-left: 24px;
+}
+
+div.bhoechie-tab-content{
+  background-color: #ffffff;
+  padding-left: 20px;
+}
+
+div.modele{ padding-top: 10px;}
+div.bois{ padding-top: 50px;}
+div.corde{ padding-top: 150px;}
+
+
+div.bhoechie-tab div.bhoechie-tab-content:not(.active){ display: none;}
+
+div.bhoechie-tab-menu, div.bhoechie-tab-container{ display: inline-flex;}
+   
+.image-custom{width: 700px; height: auto; margin: auto;}
+
+.bhoechie-tab-container a {color:black !important;}
+
+.list-group-item{
+	border:none !important; 
+	padding:5px !important;
+}
+.list-group-item span{
+	font-size: 12px;
+    font-weight: 100;
+	margin-top:5px !important;
+	text-transform: uppercase;
+}
+
+
+
+/****  bouton radio custom */
+.inputGroup {
+  background-color: #ECE9E4;
+  display: block;
+  margin: 10px 0;
+  position: relative;
+}
+
+.inputGroup:hover {
+  background-color: #E2D5C5;
+}
+
+.inputGroup label {
+  padding: 12px 30px;
+  width: 100%;
+  display: block;
+  text-align: left;
+  color: black;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  transition: color 200ms ease-in;
+  overflow: hidden;
+    font-size: 12px;
+    text-transform: uppercase;
+	line-height: 14px;
+}
+
+.inputGroup label:before {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  content: '';
+  background-color: #E2D5C5;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale3d(1, 1, 1);
+  transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  z-index: -1;
+}
+
+.inputGroup label:after {
+  width: 32px;
+  height: 32px;
+  content: '';
+  border: 2px solid #d1d7dc;
+  background-color: #fff;
+  background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.414 11L4 12.414l5.414 5.414L20.828 6.414 19.414 5l-10 10z' fill='%23fff' fill-rule='nonzero'/%3E%3C/svg%3E "); /*L'image check*/
+  background-repeat: no-repeat;
+  background-position: 2px 3px;
+  border-radius: 50%;
+  z-index: 2;
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  transition: all 200ms ease-in;
+}
+
+.inputGroup input:checked ~ label:before { /*effet rectangle check*/
+  transform: translate(-50%, -50%) scale3d(56, 56, 1);
+  opacity: 1;
+}
+.inputGroup input:checked ~ label:after { /*couleur bouton check*/
+  background-color: #C7B4A6;
+  border-color: white;
+}
+.inputGroup input {
+  width: 32px;
+  height: 32px;
+  order: 1;
+  z-index: 2;
+  position: absolute;
+  right: 30px;
+  top: 50%;/*
+  transform: translateY(-50%);*/
+  cursor: pointer;
+  visibility: hidden;
+}
+.form-custom{
+	padding: 0;
+	max-width: 550px;
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 36px;
+	background-color: #ECE9E4;
+}
+
+
+
+
 
 
 /***********************************************************************************  CONTACT */
@@ -210,6 +490,12 @@ h5.carac{ font-weight: bold; }
   -webkit-transform .2s ease-in-out;
 }
 
+.check{
+	padding-top: 20px;
+	margin-bottom: 0px !important;
+}
+
+label.objet{bottom:55px !important;}
 
 .checkbox {
 	display: block;
@@ -256,3 +542,6 @@ h5.carac{ font-weight: bold; }
 	border-width: 0 2px 2px 0;
 	transform: rotate(45deg);
 }
+
+
+.label-message{ top: 1px;}
