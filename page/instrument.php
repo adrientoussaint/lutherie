@@ -1,40 +1,39 @@
 <div class="container-fluid" id="shop">
     <div class="row p-4">
-        <div class="col p-5">
-            <div class="row justify-content-center py-3">
-                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="false">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                        <img class="d-block w-100" src="https://via.placeholder.com/500x500.png&text=six" alt="First slide">
-                        </div>
-                        <div class="carousel-item">
-                        <img class="d-block w-100" src="https://via.placeholder.com/500x500.png&text=sox" alt="Second slide">
-                        </div>
-                        <div class="carousel-item">
-                        <img class="d-block w-100" src="https://via.placeholder.com/500x500.png&text=sax" alt="Third slide">
-                        </div>
+        <div class="col p-1">
+            <div id='carousel-custom' class='carousel slide' data-ride='carousel'>
+                <!-- Wrapper for slides -->
+                <div class='carousel-inner'>
+                    <div class='carousel-item active'>
+                        <img src='http://placehold.it/500x500&text=slide1' alt='' />
                     </div>
-                    <a class="carousel-control-prev carousel-control" href="#carouselExampleCaptions" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"><i class="fas fa-arrow-left"></i></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next carousel-control" href="#carouselExampleCaptions" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"><i class="fas fa-arrow-right"></i></span>
-                        <span class="sr-only">Next</span>
-                    </a>
+                    <div class='carousel-item'>
+                        <img src='http://placehold.it/500x500&text=slide2' alt='' />
+                    </div>
+                    <div class='carousel-item'>
+                        <img src='http://placehold.it/500x500&text=slide3' alt='' />
+                    </div>
+                    
                 </div>
+            
+
+
+    
+                <!-- Indicators -->
+                <ol class='carousel-indicators'>
+                    <li data-target='#carousel-custom' data-slide-to='0' class='active'><img src='http://placehold.it/100x50&text=slide1' alt='' /></li>
+                    <li data-target='#carousel-custom' data-slide-to='1'><img src='http://placehold.it/100x50&text=slide2' alt='' /></li>
+                    <li data-target='#carousel-custom' data-slide-to='2'><img src='http://placehold.it/100x50&text=slide3' alt='' /></li>
+                </ol>
+
+                <a class="carousel-control-prev" href="#carousel-custom" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#carousel-custom" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                </a>
             </div>
-            <div class="row justify-content-center pt-2">
-                <div class="col">
-                    <img class="img-thumbnail rounded mx-auto d-block" src="http://placehold.it/170x100&text=six">
-                </div>
-                <div class="col">
-                    <img class="img-thumbnail rounded mx-auto d-block" src="http://placehold.it/170x100&text=sox">
-                </div>
-                <div class="col">
-                    <img class="img-thumbnail rounded mx-auto d-block" src="http://placehold.it/170x100&text=sax">
-                </div>
-            </div>
+
         </div>
         <div class="col black-brd-lft p-5">
             <div class="row justify-content-center">

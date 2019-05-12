@@ -10,11 +10,10 @@
 			
 			
 			<!--bootstrap + js -->
-			
-			<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 			<!-- autres libs -->
 			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" />
@@ -24,8 +23,6 @@
 			<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 			
 			<link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
-			
-			<!---------------------------------------- PROBLEME DIAPO PAGE 1------------------------------>
 			
 			<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
@@ -147,12 +144,24 @@
 			
 			
 			<script>
+				$(document).ready(function() {
 				// CHANGER TEXTE CUSTOM AVEC CHOIX
-				$('div.test').click(
+				$('div.test').on('click',
 					function(){
-						$('span#radio12').text( $('.recap-corde') );
-					});
+						$('.recap-corde').text( $('input#radio12').data('corde')+' cordes' );
+						var total = parseFloat($('#price').text());
+						var oldValue = 0;
+						var newValue = parseFloat($('#radio11').data('price'));
+						if( $('#radio11').is(':checked') ){
+							oldValue = parseFloat($('#radio11').data('price'));
 
+						} else {
+							//jfé dé truk
+						}
+						$('#price').text((total - oldValue )+ newValue);
+
+					});
+				});
 			</script>
 			
 			

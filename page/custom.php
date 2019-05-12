@@ -24,19 +24,19 @@
 			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 bhoechie-tab-menu">
 			  <div class="list-group">
 				<a href="#" class="list-group-item active text-center">
-				  <img class="img-filtre" src="http://localhost:8888/woove/page/img/icon1.png" alt=""><br/><span>modèles</span>
+				  <img class="img-filtre" src="./img/icon1.png" alt=""><br/><span>modèles</span>
 				</a>
 				<a href="#" class="list-group-item text-center">
-				  <img class="img-filtre" src="http://localhost:8888/woove/page/img/icon1.png" alt=""><br/><span>bois</span>
+				  <img class="img-filtre" src="./img/icon1.png" alt=""><br/><span>bois</span>
 				</a>
 				<a href="#" class="list-group-item text-center">
-				  <img class="img-filtre" src="http://localhost:8888/woove/page/img/icon1.png" alt=""><br/><span>cordes</span>
+				  <img class="img-filtre" src="./img/icon1.png" alt=""><br/><span>cordes</span>
 				</a>
 				<a href="#" class="list-group-item text-center">
-				  <img class="img-filtre" src="http://localhost:8888/woove/page/img/icon1.png" alt=""><br/><span>modèles</span>
+				  <img class="img-filtre" src="./img/icon1.png" alt=""><br/><span>modèles</span>
 				</a>
 				<a href="#" class="list-group-item text-center">
-				  <img class="img-filtre" src="http://localhost:8888/woove/page/img/icon1.png" alt=""><br/><span>modèles</span>
+				  <img class="img-filtre" src="./img/icon1.png" alt=""><br/><span>modèles</span>
 				</a>
 			  </div>
 			</div>
@@ -106,11 +106,11 @@
 					<center>
 					  <form class="form-custom">
 						  <div class="inputGroup">
-							<input id="radio11" name="radio" type="radio" checked/>
+							<input id="radio11" data-price="120" class="item-corde" name="radio" type="radio" checked/>
 							<label for="radio11"><span>Cordes 1<br>120€</span></label>
 						  </div>
 						  <div class="inputGroup test">
-							<input id="radio12" name="radio" type="radio"/>
+							<input id="radio12" name="radio" type="radio" data-price="175" data-corde="6"/>
 							<label for="radio12"><span>Cordes 2<br>175€</span></label>
 						  </div>
 						  <div class="inputGroup">
@@ -211,7 +211,7 @@
 				 <div class="container">
                     <div class="row justify-content-center p-3">
                        
-						<span class="prix d-block"> <b>Total :</b> 870€</span>
+						<span class="prix d-block"> <b>Total :</b> <span id="price"> 870</span>€ </span>
                     </div>
                     <div class="row justify-content-center">
                         <button type="button" class="btn btn-dark d-flex">RESERVER L'INSTRUMENT</button>
