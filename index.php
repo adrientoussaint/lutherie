@@ -94,77 +94,93 @@
 						$(this).height(140);
 					})
 				})
-				});
-			</script>
-			
-			
-			
-			<script>
-				// filtres shop
-				$('.portfolio-item').isotope({
-					itemSelector: '.item',
-					layoutMode: 'fitRows'
-				 });
-				 $('.portfolio-menu ul li').click(function(){
-					$('.portfolio-menu ul li').removeClass('active');
-					$(this).addClass('active');
 
-					var selector = $(this).attr('data-filter');
-					$('.portfolio-item').isotope({
-						filter:selector
-					});
-					return  false;
-				 });
-				 $(document).ready(function() {
-				 var popup_btn = $('.popup-btn');
-				 popup_btn.magnificPopup({
-				 type : 'image',
-				 gallery : {
-					enabled : true
-				 }
-				 });
-				 });
-
-			</script>
-			
-			
-			<script>
-			//FIRTRES CUSTOM
-				$(document).ready(function() {
-					$("div.bhoechie-tab-menu>div.list-group>a").click(function(e) {
-						e.preventDefault();
-						$(this).siblings('a.active').removeClass("active");
-						$(this).addClass("active");
-						var index = $(this).index();
-						$("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
-						$("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
-					});
+				//Filtres Custom
+				$("div.bhoechie-tab-menu>div.list-group>a").click(function(e) {
+					e.preventDefault();
+					$(this).siblings('a.active').removeClass("active");
+					$(this).addClass("active");
+					var index = $(this).index();
+					$("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
+					$("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
 				});
-			</script>
-			
-			
-			<script>
-				$(document).ready(function() {
+
 				// CHANGER TEXTE CUSTOM AVEC CHOIX
-				$('div.test').on('click',
-					function(){
-						$('.recap-corde').text( $('input#radio12').data('corde')+' cordes' );
-						var total = parseFloat($('#price').text());
-						var oldValue = 0;
-						var newValue = parseFloat($('#radio11').data('price'));
-						if( $('#radio11').is(':checked') ){
-							oldValue = parseFloat($('#radio11').data('price'));
+					var total = 0;
+					if(localStorage.getItem("total") == undefined || localStorage.getItem("total") == 0 ){
+						localStorage.setItem("oldValModel", 350);
+						localStorage.setItem("oldValBois", 250);
+						localStorage.setItem("oldValCorde", 120);
 
-						} else {
-							//jfé dé truk
+						total = parseFloat(localStorage.getItem("oldValModel")) + parseFloat(localStorage.getItem("oldValBois")) + parseFloat(localStorage.getItem("oldValCorde"));
+						localStorage.setItem("total", total);
+						$('#price').text(total);
+					}
+
+					$('.inputGroup > input').on('click',function(e){
+							console.log(e);
+							if($(this).hasClass('radioModele')){
+								console.log('Ok1');
+								var valModel = $(this).data('price');
+								if(localStorage.getItem("oldValModel") !== undefined){
+									var newTotal = (total - localStorage.getItem("oldValModel"))+ valModel;
+								}else{
+									var newTotal = total + valModel;
+								}
+								localStorage.setItem("total", newTotal);
+								localStorage.setItem("oldValModel", valModel);
+							}else if($(this).hasClass('radioBois')){
+								console.log('Ok2');
+								var valBois = $(this).data('price');
+								if(localStorage.getItem("oldValBois") !== undefined){
+									console.log('1');
+									var newTotal = (total - localStorage.getItem("oldValBois"))+ valBois;
+								}else{
+									console.log('2');
+									var newTotal = total + valBois;
+								}
+								localStorage.setItem("total", newTotal);
+								localStorage.setItem("oldValBois", valBois);
+							}else if($(this).hasClass('radioCorde')){
+								console.log('Ok3');
+								var valCorde = $(this).data('price');
+								if(localStorage.getItem("oldValCorde") !== undefined){
+									var newTotal = (total - localStorage.getItem("oldValCorde"))+ valCorde;
+								}else{
+									var newTotal = total + valCorde;
+								}
+								localStorage.setItem("total", newTotal);
+								localStorage.setItem("oldValCorde", valCorde);
+							}
+							// $('.recap-corde').text( $('input#radio12').data('corde')+' cordes' );
+							console.log(localStorage.getItem("total"));
+							$('#price').text(localStorage.getItem("total"));
+					});
+
+					// filtres shop
+					$('.portfolio-item').isotope({
+						itemSelector: '.item',
+						layoutMode: 'fitRows'
+					});
+					$('.portfolio-menu ul li').click(function(){
+						$('.portfolio-menu ul li').removeClass('active');
+						$(this).addClass('active');
+
+						var selector = $(this).attr('data-filter');
+						$('.portfolio-item').isotope({
+							filter:selector
+						});
+						return  false;
+					});
+
+					var popup_btn = $('.popup-btn');
+					popup_btn.magnificPopup({
+						type : 'image',
+						gallery : {
+							enabled : true
 						}
-						$('#price').text((total - oldValue )+ newValue);
-
 					});
 				});
-			</script>
-			
-			
-			
+			</script>	
 		</footer>
 </html>

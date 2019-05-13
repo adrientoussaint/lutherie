@@ -47,19 +47,19 @@
 					<center>
 					  <form class="form-custom">
 						  <div class="inputGroup">
-							<input id="radio1" name="radio" type="radio" checked/>
+							<input class="radioModele" id="radio1" data-number="1" data-price="350" name="radio" type="radio" checked/>
 							<label for="radio1">Modèle 1<br>350€</label>
 						  </div>
 						  <div class="inputGroup">
-							<input id="radio2" name="radio" type="radio"/>
+							<input class="radioModele" id="radio2" data-number="2" data-price="375" name="radio" type="radio"/>
 							<label for="radio2">Modèle 2<br>375€</label>
 						  </div>
 						  <div class="inputGroup">
-							<input id="radio3" name="radio" type="radio"/>
+							<input class="radioModele" id="radio3" data-number="3" data-price="450" name="radio" type="radio"/>
 							<label for="radio3">Modèle 3<br>450€</label>
 						  </div>
 						  <div class="inputGroup">
-							<input id="radio4" name="radio" type="radio"/>
+							<input class="radioModele" id="radio4" data-number="4" data-price="450" name="radio" type="radio"/>
 							<label for="radio4">Modèle 4<br>450€</label>
 						  </div>
 						</form>
@@ -73,27 +73,27 @@
 					<center>
 					  <form class="form-custom">
 						  <div class="inputGroup">
-							<input id="radio5" name="radio" type="radio" checked/>
+							<input class="radioBois" id="radio5" data-number="5" data-price="250" name="radio" type="radio" checked/>
 							<label for="radio5">Bois 1<br>250€</label>
 						  </div>
 						  <div class="inputGroup">
-							<input id="radio6" name="radio" type="radio"/>
+							<input class="radioBois" id="radio6" data-number="6" data-price="375" name="radio" type="radio"/>
 							<label for="radio6">Bois 2<br>375€</label>
 						  </div>
 						  <div class="inputGroup">
-							<input id="radio7" name="radio" type="radio"/>
+							<input class="radioBois" id="radio7" data-number="7" data-price="450" name="radio" type="radio"/>
 							<label for="radio7">Bois 3<br>450€</label>
 						  </div>
 						  <div class="inputGroup">
-							<input id="radio8" name="radio" type="radio"/>
+							<input class="radioBois" id="radio8" data-number="8" data-price="450" name="radio" type="radio"/>
 							<label for="radio8">Bois 4<br>450€</label>
 						  </div>
 						  <div class="inputGroup">
-							<input id="radio9" name="radio" type="radio"/>
+							<input class="radioBois" id="radio9" data-number="9" data-price="530" name="radio" type="radio"/>
 							<label for="radio9">Bois 5<br>530€</label>
 						  </div>
 						  <div class="inputGroup">
-							<input id="radio10" name="radio" type="radio"/>
+							<input class="radioBois" id="radio10" data-number="10" data-price="650" name="radio" type="radio"/>
 							<label for="radio10">Bois 6<br>650€</label>
 						  </div>
 						</form>
@@ -106,15 +106,15 @@
 					<center>
 					  <form class="form-custom">
 						  <div class="inputGroup">
-							<input id="radio11" data-price="120" class="item-corde" name="radio" type="radio" checked/>
+							<input class="radioCorde" id="radio11" data-number="11" data-price="120" name="radio" type="radio" checked/>
 							<label for="radio11"><span>Cordes 1<br>120€</span></label>
 						  </div>
 						  <div class="inputGroup test">
-							<input id="radio12" name="radio" type="radio" data-price="175" data-corde="6"/>
+							<input class="radioCorde" id="radio12" data-number="12" data-price="175" name="radio" type="radio" data-corde="6"/>
 							<label for="radio12"><span>Cordes 2<br>175€</span></label>
 						  </div>
 						  <div class="inputGroup">
-							<input id="radio13" name="radio" type="radio"/>
+							<input class="radioCorde" id="radio13" data-number="3" data-price="250" name="radio" type="radio"/>
 							<label for="radio13">Cordes 3<br>250€</label>
 						  </div>
 						 
