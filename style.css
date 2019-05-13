@@ -207,6 +207,15 @@ p.atelier-text{
 	margin-bottom:10px;
 }
 
+.portfolio-item a, .portfolio-item a:hover{
+	color: black;
+	text-decoration: none;
+}
+
+.portfolio-item a:visited{
+	color: black;
+	text-decoration: none;
+}
 
 /***********************************************************************************  INSTRU */
 .mx-6{

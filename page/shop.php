@@ -16,142 +16,29 @@
 		</ul>
 	</div>
 	<div class="portfolio-item row">
-		<div class="item caisse col-lg-4 col-md-4 col-6 col-sm">
-			<div class="card" style="width: 18rem;">
-				<img class="card-img-top" src="https://fakeimg.pl/200x200/" alt="Card image cap">
-				<div class="card-body">
-					<h5 class="card-title">Caisse 1</h5>
-					
-					<p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-					
-					<h5 class="card-prix">870€</h5>
-					
-					<div class="row justify-content-center">
-						<a href="?page=instrument" target="_blank" class="guitare">	
-						<button type="button" class="btn btn-dark d-flex">VOIR PLUS</button>
-						</a>
+		<div class="item guitare col-lg-4 col-md-4 col-6 col-sm">
+			<a href="?page=instrument" target="_blank" class="guitare">
+				<div class="card" style="width: 18rem;">
+					<img class="card-img-top" src="./img/guitare1.jpg" alt="Card image cap">
+					<div class="card-body">
+						<h5 class="card-title">Guitare 1</h5>
+
+						<p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+
+						<h5 class="card-prix">870€</h5>
+
+						<div class="row justify-content-center">
+							<button type="button" class="btn btn-dark d-flex">VOIR PLUS</button>
+						</div>
 					</div>
-				</div>
-			</div>           
-		</div>
-		
-		<div class="item caisse col-lg-4 col-md-4 col-6 col-sm">
-			<div class="card" style="width: 18rem;">
-				<img class="card-img-top" src="https://fakeimg.pl/200x200/" alt="Card image cap">
-				<div class="card-body">
-					<h5 class="card-title">Caisse 1</h5>
-					
-					<p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-					
-					<h5 class="card-prix">870€</h5>
-					
-					<div class="row justify-content-center">
-						<a href="?page=instrument" target="_blank" class="guitare">	
-						<button type="button" class="btn btn-dark d-flex">VOIR PLUS</button>
-						</a>
-					</div>
-				</div>
-			</div>           
-		</div>
-		
-		<div class="item caisse col-lg-4 col-md-4 col-6 col-sm">
-			<div class="card" style="width: 18rem;">
-				<img class="card-img-top" src="https://fakeimg.pl/200x200/" alt="Card image cap">
-				<div class="card-body">
-					<h5 class="card-title">Caisse 1</h5>
-					
-					<p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-					
-					<h5 class="card-prix">870€</h5>
-					
-					<div class="row justify-content-center">
-						<a href="?page=instrument" target="_blank" class="guitare">	
-						<button type="button" class="btn btn-dark d-flex">VOIR PLUS</button>
-						</a>
-					</div>
-				</div>
-			</div>           
-		</div>
-		
-		<div class="item basse col-lg-4 col-md-4 col-6 col-sm">
-			<div class="card" style="width: 18rem;">
-				<img class="card-img-top" src="https://fakeimg.pl/200x200/" alt="Card image cap">
-				<div class="card-body">
-					<h5 class="card-title">Basse 1</h5>
-					
-					<p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-					
-					<h5 class="card-prix">870€</h5>
-					
-					<div class="row justify-content-center">
-						<a href="?page=instrument" target="_blank" class="guitare">	
-						<button type="button" class="btn btn-dark d-flex">VOIR PLUS</button>
-						</a>
-					</div>
-				</div>
-			</div>           
-		</div>
-		
-		<div class="item basse col-lg-4 col-md-4 col-6 col-sm">
-			<div class="card" style="width: 18rem;">
-				<img class="card-img-top" src="https://fakeimg.pl/200x200/" alt="Card image cap">
-				<div class="card-body">
-					<h5 class="card-title">Basse 1</h5>
-					
-					<p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-					
-					<h5 class="card-prix">870€</h5>
-					
-					<div class="row justify-content-center">
-						<a href="?page=instrument" target="_blank" class="guitare">	
-						<button type="button" class="btn btn-dark d-flex">VOIR PLUS</button>
-						</a>
-					</div>
-				</div>
-			</div>           
-		</div>
-		
-		<div class="item caisse col-lg-4 col-md-4 col-6 col-sm">
-			<div class="card" style="width: 18rem;">
-				<img class="card-img-top" src="https://fakeimg.pl/200x200/" alt="Card image cap">
-				<div class="card-body">
-					<h5 class="card-title">Caisse 1</h5>
-					
-					<p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-					
-					<h5 class="card-prix">870€</h5>
-					
-					<div class="row justify-content-center">
-						<a href="?page=instrument" target="_blank" class="guitare">	
-						<button type="button" class="btn btn-dark d-flex">VOIR PLUS</button>
-						</a>
-					</div>
-				</div>
-			</div>           
-		</div>
-		
-		<div class="item basse col-lg-4 col-md-4 col-6 col-sm">
-			<div class="card" style="width: 18rem;">
-				<img class="card-img-top" src="https://fakeimg.pl/200x200/" alt="Card image cap">
-				<div class="card-body">
-					<h5 class="card-title">Basse 1</h5>
-					
-					<p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-					
-					<h5 class="card-prix">870€</h5>
-					
-					<div class="row justify-content-center">
-						<a href="?page=instrument" target="_blank" class="guitare">	
-						<button type="button" class="btn btn-dark d-flex">VOIR PLUS</button>
-						</a>
-					</div>
-				</div>
-			</div>           
+				</div> 
+			</a>
 		</div>
 		
 		<div class="item guitare col-lg-4 col-md-4 col-6 col-sm">
+			<a href="?page=instrument" target="_blank" class="guitare">	
 			<div class="card" style="width: 18rem;">
-				<img class="card-img-top" src="https://fakeimg.pl/200x200/" alt="Card image cap">
+				<img class="card-img-top" src="./img/guitare4.jpg" alt="Card image cap">
 				<div class="card-body">
 					<h5 class="card-title">Guitare 1</h5>
 					
@@ -160,17 +47,82 @@
 					<h5 class="card-prix">870€</h5>
 					
 					<div class="row justify-content-center">
-						<a href="?page=instrument" target="_blank" class="guitare">	
+						
 						<button type="button" class="btn btn-dark d-flex">VOIR PLUS</button>
-						</a>
+						
 					</div>
 				</div>
 			</div>           
+		</a>
+		</div>
+		
+		<div class="item caisse col-lg-4 col-md-4 col-6 col-sm">
+			<a href="?page=instrument" target="_blank" class="guitare">	
+				<div class="card" style="width: 18rem;">
+				<img class="card-img-top" src="./img/caisse1.jpg" alt="Card image cap">
+				<div class="card-body">
+					<h5 class="card-title">Caisse 1</h5>
+					
+					<p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+					
+					<h5 class="card-prix">870€</h5>
+					
+					<div class="row justify-content-center">
+						
+						<button type="button" class="btn btn-dark d-flex">VOIR PLUS</button>
+						
+					</div>
+				</div>
+			</div>
+		</a>
+		</div>
+		
+		<div class="item basse col-lg-4 col-md-4 col-6 col-sm">
+			<a href="?page=instrument" target="_blank" class="guitare">	
+				<div class="card" style="width: 18rem;">
+				<img class="card-img-top" src="./img/basse1.jpg" alt="Card image cap">
+				<div class="card-body">
+					<h5 class="card-title">Basse 1</h5>
+					
+					<p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+					
+					<h5 class="card-prix">870€</h5>
+					
+					<div class="row justify-content-center">
+						
+						<button type="button" class="btn btn-dark d-flex">VOIR PLUS</button>
+						
+					</div>
+				</div>
+			</div>  
+		</a>
+		</div>
+		
+		<div class="item caisse col-lg-4 col-md-4 col-6 col-sm">
+			<a href="?page=instrument" target="_blank" class="guitare">	
+			<div class="card" style="width: 18rem;">
+				<img class="card-img-top" src="./img/caisse3.jpg" alt="Card image cap">
+				<div class="card-body">
+					<h5 class="card-title">Caisse 1</h5>
+					
+					<p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+					
+					<h5 class="card-prix">870€</h5>
+					
+					<div class="row justify-content-center">
+						
+						<button type="button" class="btn btn-dark d-flex">VOIR PLUS</button>
+						
+					</div>
+				</div>
+			</div>
+			</a>
 		</div>
 		
 		<div class="item guitare col-lg-4 col-md-4 col-6 col-sm">
+			<a href="?page=instrument" target="_blank" class="guitare">	
 			<div class="card" style="width: 18rem;">
-				<img class="card-img-top" src="https://fakeimg.pl/200x200/" alt="Card image cap">
+				<img class="card-img-top" src="./img/guitare2.jpg" alt="Card image cap">
 				<div class="card-body">
 					<h5 class="card-title">Guitare 1</h5>
 					
@@ -179,13 +131,58 @@
 					<h5 class="card-prix">870€</h5>
 					
 					<div class="row justify-content-center">
-						<a href="?page=instrument" target="_blank" class="guitare">	
+						
 						<button type="button" class="btn btn-dark d-flex">VOIR PLUS</button>
-						</a>
+						
 					</div>
 				</div>
-			</div>           
+			</div> 
+			</a>
 		</div>
+		
+		<div class="item guitare col-lg-4 col-md-4 col-6 col-sm">
+			<a href="?page=instrument" target="_blank" class="guitare">	
+			<div class="card" style="width: 18rem;">
+				<img class="card-img-top" src="./img/guitare3.jpg" alt="Card image cap">
+				<div class="card-body">
+					<h5 class="card-title">Guitare 1</h5>
+					
+					<p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+					
+					<h5 class="card-prix">870€</h5>
+					
+					<div class="row justify-content-center">
+					
+						<button type="button" class="btn btn-dark d-flex">VOIR PLUS</button>
+						
+					</div>
+				</div>
+			</div>   
+			</a>
+		</div>
+		
+		<div class="item caisse col-lg-4 col-md-4 col-6 col-sm">
+			<a href="?page=instrument" target="_blank" class="guitare">
+			<div class="card" style="width: 18rem;">
+				<img class="card-img-top" src="./img/caisse2.jpg" alt="Card image cap">
+				<div class="card-body">
+					<h5 class="card-title">Caisse 1</h5>
+					
+					<p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+					
+					<h5 class="card-prix">870€</h5>
+					
+					<div class="row justify-content-center">
+						
+						<button type="button" class="btn btn-dark d-flex">VOIR PLUS</button>
+						
+					</div>
+				</div>
+			</div>
+		</a>
+		</div>
+		
+		
 		
 	</div>
 </div>
