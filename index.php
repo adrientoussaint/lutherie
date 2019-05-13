@@ -94,77 +94,89 @@
 						$(this).height(140);
 					})
 				})
-				});
-			</script>
-			
-			
-			
-			<script>
-				// filtres shop
-				$('.portfolio-item').isotope({
-					itemSelector: '.item',
-					layoutMode: 'fitRows'
-				 });
-				 $('.portfolio-menu ul li').click(function(){
-					$('.portfolio-menu ul li').removeClass('active');
-					$(this).addClass('active');
 
-					var selector = $(this).attr('data-filter');
-					$('.portfolio-item').isotope({
-						filter:selector
-					});
-					return  false;
-				 });
-				 $(document).ready(function() {
-				 var popup_btn = $('.popup-btn');
-				 popup_btn.magnificPopup({
-				 type : 'image',
-				 gallery : {
-					enabled : true
-				 }
-				 });
-				 });
-
-			</script>
-			
-			
-			<script>
-			//FIRTRES CUSTOM
-				$(document).ready(function() {
-					$("div.bhoechie-tab-menu>div.list-group>a").click(function(e) {
-						e.preventDefault();
-						$(this).siblings('a.active').removeClass("active");
-						$(this).addClass("active");
-						var index = $(this).index();
-						$("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
-						$("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
-					});
+				//Filtres Custom
+				$("div.bhoechie-tab-menu>div.list-group>a").click(function(e) {
+					e.preventDefault();
+					$(this).siblings('a.active').removeClass("active");
+					$(this).addClass("active");
+					var index = $(this).index();
+					$("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
+					$("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
 				});
-			</script>
-			
-			
-			<script>
-				$(document).ready(function() {
+
 				// CHANGER TEXTE CUSTOM AVEC CHOIX
-				$('div.test').on('click',
-					function(){
-						$('.recap-corde').text( $('input#radio12').data('corde')+' cordes' );
-						var total = parseFloat($('#price').text());
-						var oldValue = 0;
-						var newValue = parseFloat($('#radio11').data('price'));
-						if( $('#radio11').is(':checked') ){
-							oldValue = parseFloat($('#radio11').data('price'));
+				// initialiser les var
+				window.onload=function(){
+					localStorage.setItem("oldValModele", 350);
+					localStorage.setItem("oldValBois", 250);
+					localStorage.setItem("oldValCorde", 120);
 
-						} else {
-							//jfé dé truk
+					var total = parseFloat(localStorage.getItem("oldValModele")) + parseFloat(localStorage.getItem("oldValBois")) + parseFloat(localStorage.getItem("oldValCorde"));
+					localStorage.setItem("total", total);
+					$('#price').text(total);
+				}
+				//récupérer les 3 valeurs diférentes quand elles changent et les stocker dans une variable en local
+				// changer le texte à droite pour celui contenue dans data input cliqué
+				$('.inputGroup > input').on('click',function(e){
+					var price = 0;
+					var name = $(this).data("name");
+					var total = localStorage.getItem("total");
+					if($(this).hasClass('radioModele')){
+						price = $(this).data('price');
+						$("#recap-corps").text(name);
+						console.log(price)
+						calcTotal(total, price,0);
+						localStorage.setItem("oldValModele", price);
+					}else if($(this).hasClass('radioBois')){
+						price = $(this).data('price');
+						$("#recap-bois").text(name);
+						calcTotal(total, price,1);
+						localStorage.setItem("oldValBois", price);
+					}else if($(this).hasClass('radioCorde')){
+						price = $(this).data('price');
+						$("#recap-cordes").text(name+" cordes");
+						calcTotal(total, price,2);	
+						localStorage.setItem("oldValCorde", price);
+					}
+					$('#price').text(localStorage.getItem("total"));
+				});
+				// function qui calcul le total doit être appelée à chaque changement de valeur
+					function calcTotal(total, price, type){
+						console.log("valeur du radio cliqué : "+price);
+						var oldVal = [parseFloat(localStorage.getItem("oldValModele")), parseFloat(localStorage.getItem("oldValBois")), parseFloat(localStorage.getItem("oldValCorde"))]; 
+						console.log("valeur de l'ancien radio : "+oldVal[type]);
+						console.log("total ancien: " +total);
+						var newTotal = (total - oldVal[type])+ price;
+						console.log("total nouveau: " +newTotal);
+						localStorage.setItem("total", newTotal);
+					}
+					
+
+					// filtres shop
+					$('.portfolio-item').isotope({
+						itemSelector: '.item',
+						layoutMode: 'fitRows'
+					});
+					$('.portfolio-menu ul li').click(function(){
+						$('.portfolio-menu ul li').removeClass('active');
+						$(this).addClass('active');
+
+						var selector = $(this).attr('data-filter');
+						$('.portfolio-item').isotope({
+							filter:selector
+						});
+						return  false;
+					});
+
+					var popup_btn = $('.popup-btn');
+					popup_btn.magnificPopup({
+						type : 'image',
+						gallery : {
+							enabled : true
 						}
-						$('#price').text((total - oldValue )+ newValue);
-
 					});
 				});
-			</script>
-			
-			
-			
+			</script>	
 		</footer>
 </html>
