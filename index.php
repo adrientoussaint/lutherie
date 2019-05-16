@@ -95,6 +95,20 @@
 					})
 				})
 
+				
+					
+					//Filtres Custom - gravure
+					$('div.oui').on("click",function (){
+						$('div.form-field-custom').css("display","block");
+						
+					});
+					
+					$('div.non').on("click",function (){
+						$('div.form-field-custom').hide();
+					});
+					
+					
+					
 				//Filtres Custom
 				$("div.bhoechie-tab-menu>div.list-group>a").click(function(e) {
 					e.preventDefault();
@@ -104,47 +118,40 @@
 					$("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
 					$("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
 				});
+					
+				$("div.bhoechie-tab-menu>div.list-group>a").click(function(e) {
+					e.preventDefault();
+					$(this).siblings('a.active').removeClass("active");
+					$(this).addClass("active");
+					var index = $(this).index();
+					$("div.bhoechie-tab>div.bhoechie-tab-content2").removeClass("active");
+					$("div.bhoechie-tab>div.bhoechie-tab-content2").eq(index).addClass("active");
+				});
 
 				// CHANGER TEXTE CUSTOM AVEC CHOIX
-				// initialiser les var
+				// initialiser les var dans le stockage local du navigateur 
 				window.onload=function(){
 					localStorage.setItem("oldValModele", 350);
-					localStorage.setItem("oldValBois", 250);
+					localStorage.setItem("oldValBoisCorps", 250);
+					localStorage.setItem("oldValBoisManche", 250);
+					localStorage.setItem("oldValBoisTete", 250);
 					localStorage.setItem("oldValCorde", 120);
+					localStorage.setItem("oldValGravure", 0);
 
-					var total = parseFloat(localStorage.getItem("oldValModele")) + parseFloat(localStorage.getItem("oldValBois")) + parseFloat(localStorage.getItem("oldValCorde"));
-					localStorage.setItem("total", total);
+					var total = parseFloat(localStorage.getItem("oldValModele")) + parseFloat(localStorage.getItem("oldValBoisCorps")) + parseFloat(localStorage.getItem("oldValBoisManche")) + parseFloat(localStorage.getItem("oldValBoisTete"))  + parseFloat(localStorage.getItem("oldValCorde")) + parseFloat(localStorage.getItem("oldValGravure"));
+					localStorage.setItem("total", total); //setitem = mettre la valeur
 					$('#price').text(total);
 				}
-				//récupérer les 3 valeurs diférentes quand elles changent et les stocker dans une variable en local
-				// changer le texte à droite pour celui contenue dans data input cliqué
-				$('.inputGroup > input').on('click',function(e){
-					var price = 0;
-					var name = $(this).data("name");
-					var total = localStorage.getItem("total");
-					if($(this).hasClass('radioModele')){
-						price = $(this).data('price');
-						$("#recap-corps").text(name);
-						console.log(price)
-						calcTotal(total, price,0);
-						localStorage.setItem("oldValModele", price);
-					}else if($(this).hasClass('radioBois')){
-						price = $(this).data('price');
-						$("#recap-bois").text(name);
-						calcTotal(total, price,1);
-						localStorage.setItem("oldValBois", price);
-					}else if($(this).hasClass('radioCorde')){
-						price = $(this).data('price');
-						$("#recap-cordes").text(name+" cordes");
-						calcTotal(total, price,2);	
-						localStorage.setItem("oldValCorde", price);
-					}
-					$('#price').text(localStorage.getItem("total"));
-				});
+				
+				
+				
 				// function qui calcul le total doit être appelée à chaque changement de valeur
+				//on crée la fonction calctotal qui prend comme param le total, le prix et l'indice qui permet de recup l'ancienne valeur
+				//on créé un tableau abec parseFloat (qui permet de faire des opérations) qui récupére l'indice 
 					function calcTotal(total, price, type){
-						console.log("valeur du radio cliqué : "+price);
-						var oldVal = [parseFloat(localStorage.getItem("oldValModele")), parseFloat(localStorage.getItem("oldValBois")), parseFloat(localStorage.getItem("oldValCorde"))]; 
+						console.log("valeur du radio cliqué : "+price); 
+						var oldVal = [parseFloat(localStorage.getItem("oldValModele")), //getitem = on recupere la valeur 
+									  parseFloat(localStorage.getItem("oldValBoisCorps")),  parseFloat(localStorage.getItem("oldValBoisManche")), parseFloat(localStorage.getItem("oldValBoisTete")), parseFloat(localStorage.getItem("oldValCorde")), parseFloat(localStorage.getItem("oldValGravure"))]; 
 						console.log("valeur de l'ancien radio : "+oldVal[type]);
 						console.log("total ancien: " +total);
 						var newTotal = (total - oldVal[type])+ price;
@@ -152,7 +159,92 @@
 						localStorage.setItem("total", newTotal);
 					}
 					
+					function afficheBonneImage(img){
+						
+					}
+				
+				//récupérer les 3 valeurs diférentes quand elles changent et les stocker dans une variable en local
+				// changer le texte à droite pour celui contenue dans data input cliqué
+				$('.inputGroup > input').on('click',function(e){ //quand on clique un input, on verifie sur quel input on est grace à sa class, ensuite on 
+					var price = 0;
+					// on récupère le nom et l'image de l'input cliqué o
+					var name = $(this).data("name");
+					var img = $(this).data("img");
+					
+					//on récupère le total actuel
+					var total = localStorage.getItem("total");
+					if($(this).hasClass('radioModele')){//si on clique sur un input (ex:.radioModele)
+						// on récupère le prix 
+						price = $(this).data('price');
+						//et on met le name récupéré dans le recap à droite
+						$("#recap-modele").text(name);
+						//on envoie le total, le prix et l'indice dans le tableau des anciennes valeurs dans calcTotal()
+						calcTotal(total, price,0);
+						// on change la nouvelle valeure en tant qu'ancienne (vu que c'est la dernière cliquée)
+						localStorage.setItem("oldValModele", price);
+						
+					
+					}else if($(this).hasClass('radioBoisCorps')){
+						price = $(this).data('price');
+						$("#recap-bois-corps").text(name);
+						calcTotal(total, price,1);
+						localStorage.setItem("oldValBoisCorps", price);
+						$('#monImageCorps').attr('src','img/'+img+'.png');
+						//$('#monImage').attr('src','img/guitare3.jpg');
+						
+						
+					}else if($(this).hasClass('radioBoisManche')){
+						price = $(this).data('price');
+						$("#recap-bois-manche").text(name);
+						calcTotal(total, price,2);
+						localStorage.setItem("oldValBoisManche", price);
+						$('#monImageManche').attr('src','img/'+img+'.png');
+						//$('#monImage').attr('src','img/guitare3.jpg');
+						
+					}else if($(this).hasClass('radioBoisTete')){
+						price = $(this).data('price');
+						$("#recap-bois-tete").text(name);
+						calcTotal(total, price,3);
+						localStorage.setItem("oldValBoisTete", price);
+						$('#monImageTete').attr('src','img/'+img+'.png');
+						//$('#monImage').attr('src','img/guitare3.jpg');
+						
+					
+						
+					}else if($(this).hasClass('radioCorde')){
+						price = $(this).data('price');
+						$("#recap-corde").text(name);
+						calcTotal(total, price,4);	
+						localStorage.setItem("oldValCorde", price);
+						//$('#monImage').attr('src','img/basse1.jpg');
+					
+					
+					}else if($(this).hasClass('radioGravure')){
+						price = $(this).data('price');
+						$("#recap-gravure").text(name);
+						calcTotal(total, price,5);	
+						localStorage.setItem("oldValGravure", price);
+						//$('#monImage').attr('src','img/basse1.jpg');
+					}
+					
+					
+					
+					$('#price').text(localStorage.getItem("total"));
+				});
+				
 
+					
+					
+					
+					
+					
+					
+				
+					
+					
+					
+					
+					
 					// filtres shop
 					$('.portfolio-item').isotope({
 						itemSelector: '.item',

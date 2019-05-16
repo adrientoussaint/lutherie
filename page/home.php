@@ -50,27 +50,41 @@
     <!-- The slideshow -->
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="https://via.placeholder.com/1800x700.png&text=six" alt="Los Angeles">
+        <img src="img/slide0.jpg" alt="custom">
         <div class="carousel-caption d-none d-md-block">
           <span>NOUVEAU</span>
-          <h5>PIMP'</h5>
-          <p>TA CAISSE CLAIRE !</p>
+          <h5 class="titre">CUSTOM' <br>TA GUITARE</h5>
+			<div class="row justify-content-center">
+				<a class="nav-link" href="?page=custom">
+					<button type="button" class="btn btn-dark d-flex btn-slide">Découvrir</button>
+				</a>
+			</div>
         </div>
       </div>
-      <div class="carousel-item">
-        <img src="https://via.placeholder.com/1800x700.png&text=six" alt="Chicago">
+		
+       <div class="carousel-item">
+        <img src="img/slide2.jpg" alt="instru">
         <div class="carousel-caption d-none d-md-block">
-          <span>NOUVEAU</span>
-          <h5>PIMP'</h5>
-          <p>TA CAISSE CLAIRE !</p>
+          <span>SHOP</span>
+          <h5 class="titre">LES INSTRU'<br>FAIT MAIN </h5>
+			<div class="row justify-content-center">
+				<a class="nav-link" href="?page=shop">
+					<button type="button" class="btn btn-dark d-flex btn-slide">Je shop</button>
+				</a>
+			</div>
         </div>
       </div>
-      <div class="carousel-item">
-        <img src="https://via.placeholder.com/1800x700.png&text=six" alt="New York">
+		
+		<div class="carousel-item">
+        <img src="img/slide1.jpg" alt="atelier">
         <div class="carousel-caption d-none d-md-block">
-          <span>NOUVEAU</span>
-          <h5>PIMP'</h5>
-          <p>TA CAISSE CLAIRE !</p>
+          <span>DECOUVERTE</span>
+          <h5 class="titre">L'ATELIER<br>WOOVE </h5>
+			<div class="row justify-content-center">
+				<a class="nav-link" href="?page=shop">
+					<button type="button" class="btn btn-dark d-flex btn-slide">J'y vais</button>
+				</a>
+			</div>
         </div>
       </div>
     </div>

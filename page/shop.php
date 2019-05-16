@@ -1,6 +1,6 @@
 
 <div class="container">
-	<div class="row  atelier">
+	<div class="row shop">
 		<h5 class="col-12 shop-name justify-content-center">LE SHOP</h5>
 	</div>
 </div>
@@ -19,7 +19,7 @@
 		<div class="item guitare col-lg-4 col-md-4 col-6 col-sm">
 			<a href="?page=instrument" target="_blank" class="guitare">
 				<div class="card" style="width: 18rem;">
-					<img class="card-img-top" src="./img/guitare1.jpg" alt="Card image cap">
+					<img class="card-img-top" src="./img/guitare2.jpg" alt="Card image cap">
 					<div class="card-body">
 						<h5 class="card-title">Guitare 1</h5>
 
@@ -122,7 +122,7 @@
 		<div class="item guitare col-lg-4 col-md-4 col-6 col-sm">
 			<a href="?page=instrument" target="_blank" class="guitare">	
 			<div class="card" style="width: 18rem;">
-				<img class="card-img-top" src="./img/guitare2.jpg" alt="Card image cap">
+				<img class="card-img-top" src="./img/guitare1.jpg" alt="Card image cap">
 				<div class="card-body">
 					<h5 class="card-title">Guitare 1</h5>
 					

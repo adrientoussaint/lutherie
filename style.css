@@ -3,6 +3,11 @@ body{
     font-family: "Helvetica"!important;
 }
 
+@font-face {
+ font-family: "righteous";
+ src: url("./font/Righteous-Regular.ttf");
+}
+
 .justify-content-center{
 	text-align: center;
 	margin: auto;
@@ -39,6 +44,15 @@ body{
 	border-color:  black;
 }
 
+.logo{margin-top:-10px;}
+
+.navbar-brand span{
+	vertical-align: -webkit-baseline-middle;
+	font-family: "righteous";
+}
+
+.atelier h5, .contact h5, .custom h5, .shop h5, h5.titre {font-family: righteous;}
+
 /***********************************************************************************  MENU NAV   */
 
 .black-brd-btm{ border-bottom: 2px solid black; }
@@ -62,54 +76,46 @@ body{
 
 /***********************************************************************************  HOME   */
  .carousel-item .carousel-caption{
-    bottom: 40%;
+    bottom: 25%;
     background: black;
     margin-left: 20%;
     margin-right: 20%;
-    opacity: 0.7;
+    opacity: 0.85;
 }
 
 .carousel-item .carousel-caption span{
     background-color:white;
     color:black;
-    padding: 5px;
+    padding: 5px 60px 5px 60px;
     font-weight: 600;
+	margin-bottom: 200px;
 }
 
 .carousel-item .carousel-caption h5 {
     font-size: 3em;
     font-weight: 600;
-    padding-top: 5px;
+    padding-top: 30px;
 }
 
 .carousel-item .carousel-caption p{ font-size: 2em; }
-
-/*
-.carousel-control-next, .carousel-control-prev{ width:37%; }
-.carousel-control-next{ justify-content: left;}
-.carousel-control-prev{ justify-content: right;}
-*/
-
-/* .carousel-control-next, .carousel-control-prev{ width:50%; }
-
-.carousel-control-prev-icon, .carousel-control-next-icon{ margin-top: -100px !important;}
-
-.carousel-control-prev-icon, .carousel-control-next-icon{
-    background: none;
-    font-size: 40px;
-} */
 
 .carousel-inner img {
   width: 100%;
   height: 100%;
 }
 
+h5.titre{padding-bottom: 20px;}
+
+
+
+
 /***********************************************************************************  ATELIER   */
 
 .atelier{
 	display: flex;
-	padding-top: 20px;
-}
+	padding-top: 20px;}
+
+
 
 .atelier-name{
     font-size: 2em;
@@ -288,6 +294,30 @@ h5.carac{ font-weight: bold; }
 
 /***********************************************************************************  CUSTOM */
 
+.monImage{
+	display: block;
+	width: 80%;
+	position:absolute; 
+	z-index: 1;
+}
+.fond{
+	z-index: -1;
+}
+
+/*img.part1 , img.part2 , img.part3 ,
+img.part11 , img.part22 , img.part33 ,
+img.part111 , img.part222 , img.part333{
+	width: 80%;
+	position:absolute; 
+	z-index: 1;
+	display: none;
+}
+
+
+img.part0 {
+	
+}*/
+
 .img-filtre {
 	width: 65px;
 	height: auto;
@@ -343,9 +373,11 @@ div.bhoechie-tab-content{
 }
 
 div.modele{ padding-top: 10px;}
-div.bois{ padding-top: 50px;}
-div.corde{ padding-top: 150px;}
-
+div.bois-corps{ padding-top: 50px;}
+div.bois-manche{ padding-top: 150px;}
+div.bois-tete{ padding-top: 250px;}
+div.manche{ padding-top: 350px;}
+div.gravure{ padding-top: 500px;}
 
 div.bhoechie-tab div.bhoechie-tab-content:not(.active){ display: none;}
 
@@ -460,9 +492,27 @@ div.bhoechie-tab-menu, div.bhoechie-tab-container{ display: inline-flex;}
 }
 
 
+.form-field-custom label{
+    text-align: left;
+    width: 100%;
+    font-size: 12px;
+    padding-left: 10px;
+	margin: 0;
+	
+}
+
+.form-field-custom{
+	background-color: #E2D5C5;
+}
+
+.gravure .form-custom{
+	background-color: #E2D5C5;
+}
 
 
-
+div.form-field-custom{
+	display: none;
+}
 
 /***********************************************************************************  CONTACT */
 .contact-name{
