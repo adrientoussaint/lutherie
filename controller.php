@@ -47,6 +47,13 @@ function custom()
     require('./page/custom.php');
 }
 
+function devis()
+{
+    // $posts = getPosts();
+
+    require('./page/devis.php');
+}
+
 // function post()
 // {
 //     $post = getPost($_GET['id']);

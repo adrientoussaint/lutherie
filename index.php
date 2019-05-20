@@ -49,6 +49,8 @@
 					contact();
 				}elseif($_GET['page'] == 'custom'){
 					custom();
+				}elseif($_GET['page'] == 'devis'){
+					devis();
 				}
 			}
 			else {

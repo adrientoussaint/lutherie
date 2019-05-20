@@ -264,7 +264,7 @@
 								<span class="prix d-block"> <b>Total :</b> <span id="price"> 870</span>€ </span>
 							</div>
 							<div class="row justify-content-center">
-									<button type="button" class="btn btn-dark d-flex">RESERVER L'INSTRUMENT</button>
+									<button type="button" class="btn btn-dark d-flex" id="generate">Générer un devis</button>
 							</div>
 							<div class="row justify-content-center mt-2">
 									<button type="button" class="btn btn-light d-flex">ENVOYER LE DEVIS PAR MAIL</button>
@@ -275,3 +275,26 @@
 			</div>
     </div>
 </div>
+
+<script>
+$("#generate").on("click", function(){
+	$.ajax({
+		type:'POST',
+		url: "./element/devis/index.php",
+		dataType: "json",
+		data:{id:0},
+		success:function(data){
+			console.log("hey",data);
+			window.location.href = 'http://localhost/lutherie/?page=devis&id=1';
+			if(data.status == '200'){
+			}else{
+				alert('Erreur lors de la génération du devis')
+			} 
+		},
+		error:function(data){
+			console.log("how",data);
+			window.location.href = 'http://localhost/lutherie/?page=devis&id=1';
+		}
+	})
+});
+</script>
