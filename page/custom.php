@@ -278,22 +278,34 @@
 
 <script>
 $("#generate").on("click", function(){
+	var values = { "products":
+					{
+					"BoisCorps": parseFloat(localStorage.getItem("oldValBoisCorps")),
+					"BoisManche": parseFloat(localStorage.getItem("oldValBoisManche")),
+					"BoisTete": parseFloat(localStorage.getItem("oldValBoisTete")),
+					"Corde": parseFloat(localStorage.getItem("oldValCorde")),
+					"Gravure": parseFloat(localStorage.getItem("oldValGravure")),
+					"Modele": parseFloat(localStorage.getItem("oldValModele"))
+					},
+					"total": parseFloat(localStorage.getItem("total")),
+					"ref": localStorage.getItem("ref"),
+					"nb": parseFloat(localStorage.getItem("nb")),
+				};
 	$.ajax({
 		type:'POST',
 		url: "./element/devis/index.php",
 		dataType: "json",
-		data:{id:0},
+		data:{val: values},
 		success:function(data){
-			console.log("hey",data);
-			window.location.href = 'http://localhost:8888/lutherie/?page=devis&id=1';
+
+			window.location.href = 'http://localhost/lutherie/?page=devis';
 			if(data.status == '200'){
 			}else{
 				alert('Erreur lors de la génération du devis')
 			} 
 		},
 		error:function(data){
-			console.log("how",data);
-			window.location.href = 'http://localhost:8888/lutherie/?page=devis&id=1';
+			window.location.href = 'http://localhost/lutherie/?page=devis';
 		}
 	})
 });
