@@ -129,17 +129,27 @@
 					$("div.bhoechie-tab>div.bhoechie-tab-content2").removeClass("active");
 					$("div.bhoechie-tab>div.bhoechie-tab-content2").eq(index).addClass("active");
 				});
+				
+				// récupérer la date au format dd/mm/yyyy
+				function convertDate(inputFormat) {
+					function pad(s) { return (s < 10) ? '0' + s : s; }
+					var d = new Date(inputFormat);
+					return [pad(d.getDate()), pad(d.getMonth()+1), d.getFullYear()].join('-');
+				}
 
 				// CHANGER TEXTE CUSTOM AVEC CHOIX
 				// initialiser les var dans le stockage local du navigateur 
 				window.onload=function(){
+					var nb = Math.floor((Math.random() * 100) + 1)
+					var ref = "fac_"+convertDate(Date.now())+"_"+nb;
 					localStorage.setItem("oldValModele", 350);
 					localStorage.setItem("oldValBoisCorps", 250);
 					localStorage.setItem("oldValBoisManche", 250);
 					localStorage.setItem("oldValBoisTete", 250);
 					localStorage.setItem("oldValCorde", 120);
 					localStorage.setItem("oldValGravure", 0);
-
+					localStorage.setItem("ref", ref);
+					localStorage.setItem("nb", nb);
 					var total = parseFloat(localStorage.getItem("oldValModele")) + parseFloat(localStorage.getItem("oldValBoisCorps")) + parseFloat(localStorage.getItem("oldValBoisManche")) + parseFloat(localStorage.getItem("oldValBoisTete"))  + parseFloat(localStorage.getItem("oldValCorde")) + parseFloat(localStorage.getItem("oldValGravure"));
 					localStorage.setItem("total", total); //setitem = mettre la valeur
 					$('#price').text(total);
