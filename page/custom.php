@@ -285,7 +285,7 @@ $("#generate").on("click", function(){
 		data:{id:0},
 		success:function(data){
 			console.log("hey",data);
-			window.location.href = 'http://localhost/lutherie/?page=devis&id=1';
+			window.location.href = 'http://localhost:8888/lutherie/?page=devis&id=1';
 			if(data.status == '200'){
 			}else{
 				alert('Erreur lors de la génération du devis')
@@ -293,7 +293,7 @@ $("#generate").on("click", function(){
 		},
 		error:function(data){
 			console.log("how",data);
-			window.location.href = 'http://localhost/lutherie/?page=devis&id=1';
+			window.location.href = 'http://localhost:8888/lutherie/?page=devis&id=1';
 		}
 	})
 });

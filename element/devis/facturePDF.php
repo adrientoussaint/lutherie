@@ -1,7 +1,7 @@
 <?php
 // 15/08/13 - Correction ligne 30
 // v1.0 du 12/12/13 - Patrice Kuntz - blog.niap3d.com
-define('FPDF_FONTPATH','C:\wamp64\www\lutherie\font');
+define('FPDF_FONTPATH','http://localhost:8888/lutherie/font');
 require('fpdf.php');
 class facturePDF extends FPDF{
 // contenu
