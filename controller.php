@@ -54,6 +54,13 @@ function devis()
     require('./page/devis.php');
 }
 
+function erreur()
+{
+    // $posts = getPosts();
+
+    require('./page/erreur.php');
+}
+
 // function post()
 // {
 //     $post = getPost($_GET['id']);

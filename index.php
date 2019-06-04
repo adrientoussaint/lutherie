@@ -51,6 +51,8 @@
 					custom();
 				}elseif($_GET['page'] == 'devis'){
 					devis();
+				}elseif($_GET['page'] == 'erreur'){
+					erreur();
 				}
 			}
 			else {
@@ -99,7 +101,7 @@
 
 				
 					
-					//Filtres Custom - gravure
+				//Filtres Custom - gravure
 					$('div.oui').on("click",function (){
 						$('div.form-field-custom').css("display","block");
 						
@@ -146,11 +148,11 @@
 					localStorage.setItem("oldValBoisCorps", 250);
 					localStorage.setItem("oldValBoisManche", 250);
 					localStorage.setItem("oldValBoisTete", 250);
-					localStorage.setItem("oldValCorde", 120);
+					localStorage.setItem("oldValCouleur", 0);
 					localStorage.setItem("oldValGravure", 0);
 					localStorage.setItem("ref", ref);
 					localStorage.setItem("nb", nb);
-					var total = parseFloat(localStorage.getItem("oldValModele")) + parseFloat(localStorage.getItem("oldValBoisCorps")) + parseFloat(localStorage.getItem("oldValBoisManche")) + parseFloat(localStorage.getItem("oldValBoisTete"))  + parseFloat(localStorage.getItem("oldValCorde")) + parseFloat(localStorage.getItem("oldValGravure"));
+					var total = parseFloat(localStorage.getItem("oldValModele")) + parseFloat(localStorage.getItem("oldValBoisCorps")) + parseFloat(localStorage.getItem("oldValBoisManche")) + parseFloat(localStorage.getItem("oldValBoisTete"))  + parseFloat(localStorage.getItem("oldValCouleur")) + parseFloat(localStorage.getItem("oldValGravure"));
 					localStorage.setItem("total", total); //setitem = mettre la valeur
 					$('#price').text(total);
 				}
@@ -163,7 +165,7 @@
 					function calcTotal(total, price, type){
 						console.log("valeur du radio cliqué : "+price); 
 						var oldVal = [parseFloat(localStorage.getItem("oldValModele")), //getitem = on recupere la valeur 
-									  parseFloat(localStorage.getItem("oldValBoisCorps")),  parseFloat(localStorage.getItem("oldValBoisManche")), parseFloat(localStorage.getItem("oldValBoisTete")), parseFloat(localStorage.getItem("oldValCorde")), parseFloat(localStorage.getItem("oldValGravure"))]; 
+									  parseFloat(localStorage.getItem("oldValBoisCorps")),  parseFloat(localStorage.getItem("oldValBoisManche")), parseFloat(localStorage.getItem("oldValBoisTete")), parseFloat(localStorage.getItem("oldValCouleur")), parseFloat(localStorage.getItem("oldValGravure"))]; 
 						console.log("valeur de l'ancien radio : "+oldVal[type]);
 						console.log("total ancien: " +total);
 						var newTotal = (total - oldVal[type])+ price;
@@ -202,7 +204,6 @@
 						calcTotal(total, price,1);
 						localStorage.setItem("oldValBoisCorps", price);
 						$('#monImageCorps').attr('src','img/'+img+'.png');
-						//$('#monImage').attr('src','img/guitare3.jpg');
 						
 						
 					}else if($(this).hasClass('radioBoisManche')){
@@ -211,7 +212,6 @@
 						calcTotal(total, price,2);
 						localStorage.setItem("oldValBoisManche", price);
 						$('#monImageManche').attr('src','img/'+img+'.png');
-						//$('#monImage').attr('src','img/guitare3.jpg');
 						
 					}else if($(this).hasClass('radioBoisTete')){
 						price = $(this).data('price');
@@ -219,17 +219,15 @@
 						calcTotal(total, price,3);
 						localStorage.setItem("oldValBoisTete", price);
 						$('#monImageTete').attr('src','img/'+img+'.png');
-						//$('#monImage').attr('src','img/guitare3.jpg');
 						
-					
 						
-					}else if($(this).hasClass('radioCorde')){
+					}else if($(this).hasClass('radioCouleur')){
 						price = $(this).data('price');
-						$("#recap-corde").text(name);
+						$("#recap-couleur").text(name);
 						calcTotal(total, price,4);	
-						localStorage.setItem("oldValCorde", price);
-						//$('#monImage').attr('src','img/basse1.jpg');
-					
+						localStorage.setItem("oldValCouleur", price);
+						$('#monImageCouleur').attr('src','img/'+img+'.png');
+						
 					
 					}else if($(this).hasClass('radioGravure')){
 						price = $(this).data('price');
@@ -249,15 +247,8 @@
 					
 					
 					
-					
-					
-				
-					
-					
-					
-					
-					
-					// filtres shop
+		
+			// filtres shop
 					$('.portfolio-item').isotope({
 						itemSelector: '.item',
 						layoutMode: 'fitRows'
@@ -280,7 +271,17 @@
 							enabled : true
 						}
 					});
+					
+					
+			
+					
 				});
+				
+	
+			
+	
 			</script>	
+			
+		
 		</footer>
 </html>

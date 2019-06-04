@@ -25,7 +25,7 @@
         <a class="nav-link" href="?page=contact">CONTACT</a>
       </li>
       <li data-name="instagram" class="nav-item">
-        <a class="nav-link" href="#"><i class="fab fa-instagram"></i></a>
+        <a class="nav-link" href="?page=erreur"><i class="fab fa-instagram"></i></a>
       </li>
       <li data-name="facebook" class="nav-item">
         <a class="nav-link" href="#"><i class="fab fa-facebook"></i></a>

@@ -57,8 +57,8 @@
 	   
 	   
       <div class="form-field col-lg-12">
-		  <textarea id="message" name="message" class="input-text js-input" type="text" rows="10" required></textarea>
-         <label class="label label-message" for="message">Message</label>
+		  <textarea id="message" name="message" class="input-text-message js-input" type="text" rows="10" required></textarea>
+		  <label class="label label-message" for="message"><span>Message</span></label>
       </div>
 	   
 	 
@@ -72,20 +72,20 @@
 <script>
 	// the selector will match all input controls of type :checkbox
 	// and attach a click event handler 
-	$("input:checkbox").on('click', function() {
+	//$("input:checkbox").on('click', function() {
 		// in the handler, 'this' refers to the box clicked on
-		var box = $(this);
-		if (box.is(":checked")) {
+	//	var box = $(this);
+		//if (box.is(":checked")) {
 			// the name of the box is retrieved using the .attr() method
 			// as it is assumed and expected to be immutable
-			var group = ".check input:checkbox";
+		//	var group = ".check input:checkbox";
 			// the checked state of the group/box on the other hand will change
 			// and the current value is retrieved using .prop() method
-			$(group).prop("checked", false);
-			box.prop("checked", true);
-			$("input:hidden[name='subject']").val(box.attr("name"));
-		} else {
-			box.prop("checked", false);
-		}
-});
+		//	$(group).prop("checked", false);
+		//	box.prop("checked", true);
+		//	$("input:hidden[name='subject']").val(box.attr("name"));
+		//} else {
+		//	box.prop("checked", false);
+		//}
+//});
 </script>

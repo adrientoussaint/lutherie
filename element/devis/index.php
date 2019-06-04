@@ -46,5 +46,5 @@ require('gabarit0.php');
 // construit le PDF
 $pdf->buildPDF();
 // télécharge le fichier
-$pdf->Output('F','C:/wamp64/www/lutherie/pdf/'.$_POST['val']['ref'].'.pdf');
+$pdf->Output('/Applications/MAMP/htdocs/lutherie/pdf/'.$_POST['val']['ref'].'.pdf');
 ?>
