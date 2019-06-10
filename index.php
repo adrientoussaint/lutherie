@@ -117,9 +117,9 @@
 					
 					
 				// Fitres custom - choix modèle
-					$('div.part2').on("click",function (){
-						$('div.bois-corps').hide();
-					});
+					// $('div.part2').on("click",function (){
+					// 	$('div.bois-corps').hide();
+					// });
 				
 					
 					
@@ -129,8 +129,19 @@
 					$(this).siblings('a.active').removeClass("active");
 					$(this).addClass("active");
 					var index = $(this).index();
-					$("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
-					$("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
+					// si la classe Menu2IsActive est sur  les options du menu
+					if($(this).hasClass("menu2IsActive")){
+						// si le a cliqué n'a pas l'id modele
+						if($(this).attr("id") != "modele"){
+							// j'incrémente l'index de 5 pour passer au dessus du menu 1
+							index += 5;
+						}
+						$("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
+						$("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
+					}else{
+						$("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
+						$("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
+					}
 				});
 					
 				
@@ -175,9 +186,6 @@
 						localStorage.setItem("total", newTotal);
 					}
 					
-					function afficheBonneImage(img){
-						
-					}
 				
 				//récupérer les 3 valeurs diférentes quand elles changent et les stocker dans une variable en local
 				// changer le texte à droite pour celui contenue dans data input cliqué
@@ -186,6 +194,14 @@
 					// on récupère le nom et l'image de l'input cliqué o
 					var name = $(this).data("name");
 					var img = $(this).data("img");
+					console.log(img);
+					var modele = "modele1";
+					if($("div.bhoechie-tab-menu>div.list-group>a").hasClass("menu2IsActive")){
+						modele = "modele2";
+					}else{
+						modele = "modele1";
+					}
+
 					
 					//on récupère le total actuel
 					var total = localStorage.getItem("total");
@@ -198,7 +214,30 @@
 						calcTotal(total, price,0);
 						// on change la nouvelle valeure en tant qu'ancienne (vu que c'est la dernière cliquée)
 						localStorage.setItem("oldValModele", price);
-						$('#monImageModele').attr('src','img/'+img+'.png');
+						if($(this).attr("id") == "radio2"){
+							$("#pickguard>span").text('Peinture');
+							$("div.bhoechie-tab-menu>div.list-group>a").addClass("menu2IsActive");
+							$(".menu-1").css('visibility', "hidden");
+							$(".menu-2").css('visibility', "visible");
+							$('#monImageCouleur').css('visibility', 'hidden');
+							modele = "modele2";
+							$('#monImageCorps').attr('src', 'img/modele2/part1.png');
+							$('#monImageManche').attr('src', 'img/modele2/part11.png');
+							$('#monImageTete').attr('src', 'img/modele2/part111.png');
+							$('#monImageCouleur').attr('src', 'img/modele2/part1.png');
+						}else{
+							$("div.bhoechie-tab-menu>div.list-group>a").removeClass("menu2IsActive");
+							$("#pickguard>span").text('Pickguard');
+							$(".menu-1").css('visibility', "visible");
+							$(".menu-2").css('visibility', "hidden");
+							$('#monImageCouleur').css('visibility', 'visible');
+							modele = "modele1";
+							$('#monImageCorps').attr('src', 'img/modele1/part1.png');
+							$('#monImageManche').attr('src', 'img/modele1/part11.png');
+							$('#monImageTete').attr('src', 'img/modele1/part111.png');
+							$('#monImageCouleur').attr('src', 'img/modele1/part1111.png');
+						}
+						$('#monImageModele').attr('src','img/'+modele+'/'+img+'.png');
 						
 					
 					}else if($(this).hasClass('radioBoisCorps')){
@@ -206,7 +245,7 @@
 						$("#recap-bois-corps").text(name);
 						calcTotal(total, price,1);
 						localStorage.setItem("oldValBoisCorps", price);
-						$('#monImageCorps').attr('src','img/'+img+'.png');
+						$('#monImageCorps').attr('src','img/'+modele+'/'+img+'.png');
 						
 						
 					}else if($(this).hasClass('radioBoisManche')){
@@ -214,14 +253,14 @@
 						$("#recap-bois-manche").text(name);
 						calcTotal(total, price,2);
 						localStorage.setItem("oldValBoisManche", price);
-						$('#monImageManche').attr('src','img/'+img+'.png');
+						$('#monImageManche').attr('src','img/'+modele+'/'+img+'.png');
 						
 					}else if($(this).hasClass('radioBoisTete')){
 						price = $(this).data('price');
 						$("#recap-bois-tete").text(name);
 						calcTotal(total, price,3);
 						localStorage.setItem("oldValBoisTete", price);
-						$('#monImageTete').attr('src','img/'+img+'.png');
+						$('#monImageTete').attr('src','img/'+modele+'/'+img+'.png');
 						
 						
 					}else if($(this).hasClass('radioCouleur')){
@@ -229,7 +268,7 @@
 						$("#recap-couleur").text(name);
 						calcTotal(total, price,4);	
 						localStorage.setItem("oldValCouleur", price);
-						$('#monImageCouleur').attr('src','img/'+img+'.png');
+						$('#monImageCouleur').attr('src','img/'+modele+'/'+img+'.png');
 						
 					
 					}else if($(this).hasClass('radioGravure')){

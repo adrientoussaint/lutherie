@@ -22,7 +22,7 @@
 			<div class="col-3 bhoechie-tab-container">
 				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 bhoechie-tab-menu">
 					<div class="list-group">
-						<a href="#" class="list-group-item active text-center">
+						<a href="#" class="list-group-item active text-center" id="modele">
 							<img class="img-filtre" src="./img/icon1.png" alt=""><br/><span>modèles</span>
 						</a>
 						<a href="#" class="list-group-item text-center">
@@ -34,7 +34,7 @@
 						<a href="#" class="list-group-item text-center">
 							<img class="img-filtre" src="./img/icon4.png" alt=""><br/><span>bois tête</span>
 						</a>
-						<a href="#" class="list-group-item text-center">
+						<a href="#" class="list-group-item text-center" id="pickguard">
 							<img class="img-filtre" src="./img/icon5.png" alt=""><br/><span>Pickguard</span>
 						</a>
 						<a href="#" class="list-group-item text-center">
@@ -62,8 +62,9 @@
 						</center>
 					</div>
 
+					<!-- Menu 1 - Radio -->
 					<!-- BOIS section -->
-					<div class="bhoechie-tab-content bois-corps ">
+					<div class="bhoechie-tab-content menu-1 bois-corps ">
 						<center>
 							<form class="form-custom">
 								<div class="inputGroup">
@@ -86,7 +87,7 @@
 					
 				
 					<!-- CORD section -->
-					<div class="bhoechie-tab-content bois-manche ">
+					<div class="bhoechie-tab-content menu-1 bois-manche ">
 						<center>
 							<form class="form-custom">
 								<div class="inputGroup">
@@ -108,7 +109,7 @@
 					</div>
 					
 					<!-- CORD section -->
-					<div class="bhoechie-tab-content bois-tete ">
+					<div class="bhoechie-tab-content menu-1 bois-tete ">
 						<center>
 							<form class="form-custom">
 								<div class="inputGroup">
@@ -132,7 +133,7 @@
 					
 					
 					<!-- sons section -->
-					<div class="bhoechie-tab-content manche ">
+					<div class="bhoechie-tab-content menu-1 manche ">
 						<center>
 							<form class="form-custom">
 								<div class="inputGroup">
@@ -165,7 +166,7 @@
 					
 					
 					<!-- gravure section -->
-					<div class="bhoechie-tab-content gravure ">
+					<div class="bhoechie-tab-content menu-1 gravure ">
 						<center>
 							<form class="form-custom">
 								<div class="inputGroup oui">
@@ -189,6 +190,133 @@
 						</center>
 					</div>
 					
+					<!-- Menu 2 - Radio -->
+					<!-- BOIS section -->
+					<div class="bhoechie-tab-content menu-2 bois-corps ">
+						<center>
+							<form class="form-custom">
+								<div class="inputGroup">
+								<input class="radioBoisCorps" id="radio33" data-name="Noyer" data-price="250" name="radio" type="radio"  data-img="part1"  checked/>
+								<label for="radio33">Hêtre<br>250€</label>
+								</div>
+								<div class="inputGroup">
+								<input class="radioBoisCorps" id="radio44" data-name="Hètre" data-price="375" name="radio" type="radio" data-img="part2"/>
+								<label for="radio44">Frêne<br>375€</label>
+								</div>
+								<div class="inputGroup">
+								<input class="radioBoisCorps" id="radio55" data-name="Chêne" data-price="450" name="radio" type="radio" data-img="part3"/>
+								<label for="radio55">Chêne<br>450€</label>
+								</div>
+								
+							</form>
+							
+						</center>
+					</div>
+					
+				
+					<!-- CORD section -->
+					<div class="bhoechie-tab-content menu-2 bois-manche ">
+						<center>
+							<form class="form-custom">
+								<div class="inputGroup">
+								<input class="radioBoisManche" id="radio6" data-name="Wengé" data-price="250" name="radio" type="radio" checked data-img="part11"/>
+								<label for="radio6">Wengé<br>250€</label>
+								</div>
+								<div class="inputGroup">
+								<input class="radioBoisManche" id="radio7" data-name="Hètre" data-price="375" name="radio" type="radio" data-img="part22"/>
+								<label for="radio7">Hètre<br>375€</label>
+								</div>
+								<div class="inputGroup">
+								<input class="radioBoisManche" id="radio8" data-name="Chène" data-price="450" name="radio" type="radio" data-img="part33"/>
+								<label for="radio8">Chène<br>450€</label>
+								</div>
+								
+							</form>
+							
+						</center>
+					</div>
+					
+					<!-- CORD section -->
+					<div class="bhoechie-tab-content menu-2 bois-tete ">
+						<center>
+							<form class="form-custom">
+								<div class="inputGroup">
+								<input class="radioBoisTete" id="radio9" data-name="Wengé" data-price="250" name="radio" type="radio" checked data-img="part111"/>
+								<label for="radio9">Wengé<br>250€</label>
+								</div>
+								<div class="inputGroup">
+								<input class="radioBoisTete" id="radio10" data-name="Hètre" data-price="375" name="radio" type="radio" data-img="part222"/>
+								<label for="radio10">Hètre<br>375€</label>
+								</div>
+								<div class="inputGroup">
+								<input class="radioBoisTete" id="radio11" data-name="Chène" data-price="450" name="radio" type="radio" data-img="part333"/>
+								<label for="radio11">Chène<br>450€</label>
+								</div>
+								
+							</form>
+							
+						</center>
+					</div>
+					
+					
+					
+					<!-- sons section -->
+					<div class="bhoechie-tab-content menu-2 manche ">
+						<center>
+							<form class="form-custom">
+								<div class="inputGroup">
+								<input class="radioCouleur" id="radio12" data-name="Rouge" data-price="0" name="radio" type="radio" data-img="part1111" checked/>
+								<label for="radio12"><span>Rouge<br>0€</span></label>
+								</div>
+								<div class="inputGroup test">
+								<input class="radioCouleur" id="radio13" data-name="Brun" data-price="0" name="radio" type="radio" data-img="part2222"/>
+								<label for="radio13"><span>Brun<br>0€</span></label>
+								</div>
+								<div class="inputGroup">
+								<input class="radioCouleur" id="radio14" data-name="Noir" data-price="0" name="radio" type="radio" data-img="part3333"/>
+								<label for="radio14">Noir<br>0€</label>
+								</div>
+								<div class="inputGroup">
+								<input class="radioCouleur" id="radio15" data-name="Bleu" data-price="0" name="radio" type="radio" data-img="part4444"/>
+								<label for="radio15"><span>Bleu<br>0€</span></label>
+								</div>
+								<div class="inputGroup">
+								<input class="radioCouleur" id="radio16" data-name="Rose" data-price="0" name="radio" type="radio" data-img="part5555"/>
+								<label for="radio16"><span>Rose<br>0€</span></label>
+								</div>
+							
+							</form>
+							
+						</center>
+					</div>
+					
+					
+					
+					
+					<!-- gravure section -->
+					<div class="bhoechie-tab-content menu-2 gravure ">
+						<center>
+							<form class="form-custom">
+								<div class="inputGroup oui">
+									<input class="radioGravure" id="radio17" data-name="oui" data-price="20" name="radio" type="radio" />
+									<label for="radio17">Oui<br>20€</label>
+								</div>
+								
+								<div class="form-field-custom">
+									<label class="label" for="prenom">Votre texte</label> 
+									<input id="prenom" class="input-text js-input" type="text" required>
+								 </div>
+								
+								<div class="inputGroup non">
+								<input class="radioGravure" id="radio18" data-name="non" data-price="0" name="radio" type="radio" checked/>
+								<label for="radio18"><span>Non <br>0€</span></label>
+								</div>
+								
+							
+							</form>
+							
+						</center>
+					</div>
 			
 				</div>
 			</div>
@@ -213,11 +341,11 @@
 				
 				
 				<!--mod 1-->
-				<img src="img/part0.png" alt="guitare 1" id="monImageModele" class="monImage fond">
-				<img src="img/part1.png" alt="guitare 1" id="monImageCorps" class="monImage">
-				<img src="img/part11.png" alt="guitare 1" id="monImageTete" class="monImage" >
-				<img src="img/part111.png" alt="guitare 1" id="monImageManche" class="monImage" >
-				<img src="img/part1111.png" alt="guitare 1" id="monImageCouleur" class="monImage" >
+				<img src="img/modele1/part0.png" alt="guitare 1" id="monImageModele" class="monImage fond">
+				<img src="img/modele1/part1.png" alt="guitare 1" id="monImageCorps" class="monImage">
+				<img src="img/modele1/part11.png" alt="guitare 1" id="monImageTete" class="monImage" >
+				<img src="img/modele1/part111.png" alt="guitare 1" id="monImageManche" class="monImage" >
+				<img src="img/modele1/part1111.png" alt="guitare 1" id="monImageCouleur" class="monImage" >
 
 						
 			</div>
