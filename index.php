@@ -37,31 +37,58 @@
 			require('controller.php');
 
 			if (isset($_GET['page'])) {
-				if ($_GET['page'] == 'home') {
+				switch($_GET['page'])
+				{
+					case 'home':
 					home();
-				}elseif($_GET['page'] == 'shop'){
+					break;
+						
+					case 'shop':
 					shop();
-				}elseif($_GET['page'] == 'instrument'){
+					break;
+						
+					case 'instrument':
 					instrument();
-				}elseif($_GET['page'] == 'atelier'){
+					break;
+						
+					case 'atelier':
 					atelier();
-				}elseif($_GET['page'] == 'contact'){
+					break;
+						
+					case 'contact':
 					contact();
-				}elseif($_GET['page'] == 'custom'){
+					break;
+						
+					case 'custom':
 					custom();
-				}elseif($_GET['page'] == 'devis'){
+					break;
+						
+					case 'devis':
 					devis();
-				}elseif($_GET['page'] == 'erreur'){
-					erreur();
-				}elseif($_GET['page'] == 'mentions'){
+					break;
+						
+					case 'mentions':
 					mentions();
-				}elseif($_GET['page'] == 'politique'){
+					break;
+
+					case 'erreur':
+					erreur();
+					break;
+						
+					case 'politique':
 					politique();
+					break;
+
+					default :
+					erreur();
+					break;
 				}
+			
 			}
 			else {
 				home();
 			}
+			
 			include("./element/footer.php");
 		?>
 		</body>
