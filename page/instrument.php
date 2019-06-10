@@ -119,104 +119,86 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
-        <div class="info-reserv">
-			<span>Pour reserver l'instrument, merci de remplir les champs d'informations ci-dessous afin que nous puissons vous recontacter.</span>
-		</div>
-	 
-	   <div class="form-reserv">
-		<form class="contact-form row reserv-form" action="mailreservation.php" method="post">
-		  <div class="form-field col-lg-6">
-			 <input id="nom" name="nom" class="input-text js-input" type="text" required>
-			 <label class="label" for="nom">Nom</label>
-		  </div>
-		  <div class="form-field col-lg-6">
-			 <input id="prenom" name="prenom" class="input-text js-input" type="text" required>
-			 <label class="label" for="prenom">Prénom</label>
-		  </div>
-		  <div class="form-field col-lg-6 ">
-			 <input id="email" name="email" class="input-text js-input" type="email" required>
-			 <label class="label" for="email">E-mail</label>
-		  </div>
-		  <div class="form-field col-lg-6 ">
-			 <input id="phone" name="phone" class="input-text js-input" type="text">
-			 <label class="label" for="phone">Numéro de téléphone</label>
-		  </div>
-	   
-      <div class="form-field col-lg-12">
-		  <textarea id="message" name="message" class="input-text-message js-input" type="text" rows="10" required></textarea>
-		  <label class="label label-message" for="message"><span>Message</span></label>
-      </div>
-		
-	   
+		<form class="contact-form row reserv-form" id="reservForm" action="" method="post">
+		  <div class="modal-body">
+				<div class="info-reserv">
+					<span>Pour reserver l'instrument, merci de remplir les champs d'informations ci-dessous afin que nous puissons vous recontacter.</span>
+				</div>
+
+			   <div class="form-reserv">
+
+				  <div class="form-field col-lg-6">
+					 <input id="nom" name="nom" class="input-text js-input" type="text" required>
+					 <label class="label" for="nom">Nom</label>
+				  </div>
+				  <div class="form-field col-lg-6">
+					 <input id="prenom" name="prenom" class="input-text js-input" type="text" required>
+					 <label class="label" for="prenom">Prénom</label>
+				  </div>
+				  <div class="form-field col-lg-6 ">
+					 <input id="email" name="email" class="input-text js-input" type="email" required>
+					 <label class="label" for="email">E-mail</label>
+				  </div>
+				  <div class="form-field col-lg-6 ">
+					 <input id="phone" name="phone" class="input-text js-input" type="text">
+					 <label class="label" for="phone">Numéro de téléphone</label>
+				  </div>
+
+				  <div class="form-field col-lg-12">
+					  <textarea id="message" name="message" class="input-text-message js-input" type="text" rows="10" required></textarea>
+					  <label class="label label-message" for="message"><span>Message</span></label>
+				  </div>
+				
+
+			   </div>
+			  <div class="" id="sucess-reserv">
+					<h5>Votre reservation à bien été prise en compte !</h5>
+					<p>L'équipe de Woove reviendra vers vous aussi vite que possible.</p>
+				</div>
      <!-- <div class="form-field col-lg-12">
          <input class="submit-btn btn-dark" type="submit" value="Envoyer">
       </div>-->
-   		</form>
-	</div>
-		  
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary btn-fermer" data-dismiss="modal">Fermer</button>
-        <button type="submit" class="btn btn-primary submit-btn btn-dark" data-dismiss="modal">Envoyer</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<!-- Modal informations-->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Informations sur l'instrument</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="info-reserv">
-			<span>Pour reserver l'instrument, merci de remplir les champs d'informations ci-dessous afin que nous puissons vous recontacter.</span>
 		</div>
-	 
-	   <div class="form-reserv">
-		<form class="contact-form row reserv-form" action="" method="post">
-		  <div class="form-field col-lg-6">
-			 <input id="nom" name="nom" class="input-text js-input" type="text" required>
-			 <label class="label" for="nom">Nom</label>
-		  </div>
-		  <div class="form-field col-lg-6">
-			 <input id="prenom" name="prenom" class="input-text js-input" type="text" required>
-			 <label class="label" for="prenom">Prénom</label>
-		  </div>
-		  <div class="form-field col-lg-6 ">
-			 <input id="email" name="email" class="input-text js-input" type="email" required>
-			 <label class="label" for="email">E-mail</label>
-		  </div>
-		  <div class="form-field col-lg-6 ">
-			 <input id="phone" name="phone" class="input-text js-input" type="text">
-			 <label class="label" for="phone">Numéro de téléphone</label>
-		  </div>
-	   
-      <div class="form-field col-lg-12">
-		  <textarea id="message" name="message" class="input-text-message js-input" type="text" rows="10" required></textarea>
-		  <label class="label label-message" for="message"><span>Message</span></label>
-      </div>
-		
-	   
-     <!-- <div class="form-field col-lg-12">
-         <input class="submit-btn btn-dark" type="submit" value="Envoyer">
-      </div>-->
-   		</form>
-	</div>
 		  
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary btn-fermer" data-dismiss="modal">Fermer</button>
-        <button type="submit" class="btn btn-primary submit-btn btn-dark">Envoyer</button>
-      </div>
+    
+		
+	
+		
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-secondary btn-fermer" data-dismiss="modal">Fermer</button>
+			<input class="submit-btn btn-dark" type="submit" value="Envoyer">
+		  </div>
+		</form>
+	</div>
     </div>
-  </div>
 </div>
+
+
+<script>
+	
+	$("#reservForm").on("submit", function(e){
+		e.preventDefault();
+		var nom = $('#nom').val();
+		var prenom = $('#prenom').val();
+		var email = $('#email').val();
+		var phone = $('#phone').val();	
+		var message = $('#message').val();
+		$.ajax({
+			type:'POST',
+			url: "./action/reservermail.php",
+			dataType: "json",
+			data:{nom, prenom, email, phone, message},
+			success:(function(){
+				$("#sucess-reserv").css('display', 'block');
+				$(".form-reserv").css('display', 'none');
+				$(".submit-btn").css('display', 'none');
+			}),
+			error:function(){
+				alert("erreur dans l'envoi du mail");
+			}
+		})
+	});
+	
+</script>
+
 

@@ -15,7 +15,7 @@
 </div>
 
 <section class="form container">
-   <form class="contact-form row" id="contactForm" action="action/mail.php" method="post">
+   <form class="contact-form row" id="contactForm" action="" method="post">
       <div class="form-field col-lg-6">
          <input id="nom" name="nom" class="input-text js-input" type="text" required>
          <label class="label" for="nom">Nom</label>
@@ -61,42 +61,42 @@
 		  <label class="label label-message" for="message"><span>Message</span></label>
       </div>
 	   
-	 
-	   
-	   
       <div class="form-field col-lg-12">
          <input class="submit-btn btn-dark" type="submit" value="Envoyer">
       </div>
    </form>
-	<div class="d-none" id="sucess">
-		Bravo Cha marche
+	<div class="" id="sucess">
+		<h5>Votre mail à bien été envoyé !</h5>
+		<p>L'équipe de Woove reviendra vers vous aussi vite que possible !</p>
+		 <button type="button" class="btn btn-secondary btn-fermer btn-form">Retour au formulaire</button>
 	</div>
 </section>
 <script>
 	
-	$("#contactForm").on("submit", function(){
+	$("#contactForm").on("submit", function(e){
+		e.preventDefault();
 		var nom = $('#nom').val();
 		var prenom = $('#prenom').val();
 		var email = $('#email').val();
 		var phone = $('#phone').val();
-		var objet = $('#objet').val();
+		var objet = $('#objet').val();	
 		var message = $('#message').val();
 		$.ajax({
-		type:'POST',
-		url: "./action/mail.php",
-		dataType: "json",
-		data:{nom, prenom, email, phone, objet, message},
-		success:function(data){
-			if(data.status == '200'){
-				$("#success").css('display', 'block');
+			type:'POST',
+			url: "./action/mail.php",
+			dataType: "json",
+			data:{nom, prenom, email, phone, objet, message},
+			success:(function(){
+				$("#sucess").css('display', 'block');
 				$("#contactForm").css('display', 'none');
-			}else{
-				alert('Erreur lors de l\'envoi du mail')
-			} 
-		},
-		error:function(data){
-			window.location.href = 'http://localhost:8888/lutherie/?page=devis';
-		}
-	})
-	})
+			}),
+			error:function(){
+				alert("erreur dans l'envoi du mail");
+			}
+		})
+	});
+	
+	$(".btn-form").on("click", function(){
+		location.reload();
+	});
 </script>

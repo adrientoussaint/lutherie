@@ -108,8 +108,7 @@
 				//Filtres Custom - gravure
 					$('div.oui').on("click",function (){
 						$('div.form-field-custom').css("display","block");
-						
-					});
+					});	
 					
 					$('div.non').on("click",function (){
 						$('div.form-field-custom').hide();

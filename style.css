@@ -376,6 +376,8 @@ h5.carac{ font-weight: bold; }
 
 .renseignements a, .renseignements:hover a{color: black; text-decoration: none;}
 
+#sucess-reserv{display: none;}
+
 /***********************************************************************************  CUSTOM */
 
 .menu-2{
@@ -773,7 +775,13 @@ label.objet{bottom:55px !important;}
 
 .label-message { top: 1px;}
 
+#sucess h5{
+	font-size: 1.2rem;
+	font-weight: bold;
+	text-transform: uppercase;
+}
 
+#sucess{display: none;}
 
 /********************FOOTER***********/
 
