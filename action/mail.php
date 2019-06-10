@@ -7,18 +7,18 @@ $phone=$_POST['phone'];
 $text=$_POST['message'];
 
 $to = "claudie.lesoudard@gmail.com";
-$subject = $_POST['subject'];
+$objet = $_POST['objet'];
 
-$message="<html><head></head><body>Nom :".$nom." <br> Prenom :".$prenom."<br> Mail :".$mail." <br> Téléphone:".$phone." <br> Objet(s) du mail : ".$subject." <br> Message :".$text."</body></html>";
+$message="<html><head></head><body>Nom :".$nom." <br> Prenom :".$prenom."<br> Mail :".$email." <br> Téléphone:".$phone." <br> Objet(s) du mail : ".$objet." <br> Message :".$text."</body></html>";
 
 $headers  = 'MIME-Version: 1.0' . "\r\n";
 $headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
-
-if(mail($to, $subject, $message, $headers)){
-    echo "OK";
-}else{
-    echo "KO";
-}
+mail($to, $objet, $message, $headers)
+//if(mail($to, $subject, $message, $headers)){
+  //  echo "OK";
+//}else{
+  //  echo "KO";
+//}
 // phpinfo();
 
 ?>

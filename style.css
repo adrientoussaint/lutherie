@@ -17,7 +17,7 @@ body{
 	border-radius:0px !important;
 }
 
-.btn-light, .btn-dark{
+.btn-light, .btn-dark, .btn-fermer{
     text-transform: uppercase;
     font-weight: bold;
 	font-size: 10px !important;
@@ -42,6 +42,11 @@ body{
 .btn-dark:hover{
     background-color: black;
 	border-color:  black;
+}
+
+.btn-fermer:hover{
+    background-color: #C7B4A6;
+	border-color:  #C7B4A6;
 }
 
 .logo{margin-top:-10px;}
@@ -252,7 +257,7 @@ div.lg-atelier-text{ width: 75%;}
 }
 
 .portfolio-menu ul{padding:0px;}
-}
+
 
  .portfolio-menu .btn:hover {
     background-color: #E2D5C5 !important;
@@ -346,6 +351,30 @@ h5.carac{ font-weight: bold; }
   opacity: 0.75;
 }
 
+.modal-title{
+	font-size:2em;
+	font-weight: bold;
+}
+
+.modal-header{
+	border: 0px solid #dee2e6 !important;
+	padding-bottom: 0px !important;
+}
+
+.modal-body{
+	border: 0px solid #dee2e6 !important;
+	padding-top: 5px !important;
+}
+
+
+.info-reserv {
+	border-bottom: 1px solid #dee2e6;
+	padding-bottom: 10px;
+}
+
+.form-reserv{padding-top: 20px;}
+
+.renseignements a, .renseignements:hover a{color: black; text-decoration: none;}
 
 /***********************************************************************************  CUSTOM */
 

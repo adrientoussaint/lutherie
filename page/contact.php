@@ -15,7 +15,7 @@
 </div>
 
 <section class="form container">
-   <form class="contact-form row" action="action/mail.php" method="post">
+   <form class="contact-form row" id="contactForm" action="action/mail.php" method="post">
       <div class="form-field col-lg-6">
          <input id="nom" name="nom" class="input-text js-input" type="text" required>
          <label class="label" for="nom">Nom</label>
@@ -68,24 +68,35 @@
          <input class="submit-btn btn-dark" type="submit" value="Envoyer">
       </div>
    </form>
+	<div class="d-none" id="sucess">
+		Bravo Cha marche
+	</div>
 </section>
 <script>
-	// the selector will match all input controls of type :checkbox
-	// and attach a click event handler 
-	//$("input:checkbox").on('click', function() {
-		// in the handler, 'this' refers to the box clicked on
-	//	var box = $(this);
-		//if (box.is(":checked")) {
-			// the name of the box is retrieved using the .attr() method
-			// as it is assumed and expected to be immutable
-		//	var group = ".check input:checkbox";
-			// the checked state of the group/box on the other hand will change
-			// and the current value is retrieved using .prop() method
-		//	$(group).prop("checked", false);
-		//	box.prop("checked", true);
-		//	$("input:hidden[name='subject']").val(box.attr("name"));
-		//} else {
-		//	box.prop("checked", false);
-		//}
-//});
+	
+	$("#contactForm").on("submit", function(){
+		var nom = $('#nom').val();
+		var prenom = $('#prenom').val();
+		var email = $('#email').val();
+		var phone = $('#phone').val();
+		var objet = $('#objet').val();
+		var message = $('#message').val();
+		$.ajax({
+		type:'POST',
+		url: "./action/mail.php",
+		dataType: "json",
+		data:{nom, prenom, email, phone, objet, message},
+		success:function(data){
+			if(data.status == '200'){
+				$("#success").css('display', 'block');
+				$("#contactForm").css('display', 'none');
+			}else{
+				alert('Erreur lors de l\'envoi du mail')
+			} 
+		},
+		error:function(data){
+			window.location.href = 'http://localhost:8888/lutherie/?page=devis';
+		}
+	})
+	})
 </script>
