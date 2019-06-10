@@ -349,6 +349,10 @@ h5.carac{ font-weight: bold; }
 
 /***********************************************************************************  CUSTOM */
 
+.menu-2{
+  visibility: hidden;
+}
+
 .monImage{
 	display: block;
 	width: 80%;
