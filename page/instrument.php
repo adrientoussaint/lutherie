@@ -1,5 +1,5 @@
 <div class="container-fluid" id="shop">
-    <div class="row p-4">
+    <div class="row p-3">
         <div class="col p-1">
             <div id='carousel-custom' class='carousel slide' data-ride='carousel'>
 				
@@ -47,7 +47,7 @@
             </div>
 
         </div>
-        <div class="col black-brd-lft p-5">
+        <div class="col-lg-12 col-xl-6 col-md-12 black-brd-lft p-lg-5 p-md-12 p-sm-1">
             <div class="row justify-content-center">
                 <h5 class="guitar-name">Electromatic Walnut</h5>
                 <p class="text-center px-3 pt-3"> Vous cherchez une guitare électrique d’allure vintage capable d’assurer sur les genres de musique bien lourds ? La semi hollow-body Gretsch G5622T-CB pourrait bien être pile ce qu’il vous faut ! Issue de la célèbre série Electromatic, elle propose un design classique avec bloc central en épicéa qui permet de partir sur de grosses saturations sans trop s’exposer aux larsens. Ceci permet également davantage de sustain qu’une guitare hollow body standard. Son corps Thinline de 44 mm d’é  paisseur comprend, par ailleurs, deux pans coupés qui facilitent le jeu dans les aigus et deux ouïes « cat’s eye » typées ‘60s. Au niveau des micros, le constructeur américain a opté pour pas moins de trois humbuckers.</p>
@@ -66,7 +66,7 @@
             <div class="row">
                 <div class="col-12"></div>
 				<div class="col-8 ligne-page-instru black-brd-tp"></div>
-                <div class="col-12 justify-content-center  my-3">
+                <div class="col-12 justify-content-center p-sm-1 my-3">
                     <h5 class="text-uppercase text-center my-3 carac">Caracteristiques</h5>
                     
                     <table class="m-auto">

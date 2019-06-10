@@ -16,7 +16,7 @@
 		</ul>
 	</div>
 	<div class="portfolio-item row">
-		<div class="item guitare col-lg-4 col-md-4 col-6 col-sm">
+		<div class="item guitare col-lg-4 col-md-6 col-sm-12">
 			<a href="?page=instrument" target="_blank" class="guitare">
 				<div class="card" style="width: 18rem;">
 					<img class="card-img-top" src="./img/guitare1.png" alt="Card image cap">
@@ -35,7 +35,7 @@
 			</a>
 		</div>
 		
-		<div class="item guitare col-lg-4 col-md-4 col-6 col-sm">
+		<div class="item guitare col-lg-4 col-md-6 col-sm-12">
 			<a href="?page=instrument" target="_blank" class="guitare">	
 			<div class="card" style="width: 18rem;">
 				<img class="card-img-top" src="./img/guitare4.png" alt="Card image cap">
@@ -56,7 +56,7 @@
 		</a>
 		</div>
 		
-		<div class="item caisse col-lg-4 col-md-4 col-6 col-sm">
+		<div class="item caisse col-lg-4 col-md-6 col-sm-12">
 			<a href="?page=instrument" target="_blank" class="guitare">	
 				<div class="card" style="width: 18rem;">
 				<img class="card-img-top" src="./img/caisse2.png" alt="Card image cap">
@@ -77,7 +77,7 @@
 		</a>
 		</div>
 		
-		<div class="item basse col-lg-4 col-md-4 col-6 col-sm">
+		<div class="item basse col-lg-4 col-md-6 col-sm-12">
 			<a href="?page=instrument" target="_blank" class="guitare">	
 				<div class="card" style="width: 18rem;">
 				<img class="card-img-top" src="./img/basse1.png" alt="Card image cap">
@@ -98,7 +98,7 @@
 		</a>
 		</div>
 		
-		<div class="item caisse col-lg-4 col-md-4 col-6 col-sm">
+		<div class="item caisse col-lg-4 col-md-6 col-sm-12">
 			<a href="?page=instrument" target="_blank" class="guitare">	
 			<div class="card" style="width: 18rem;">
 				<img class="card-img-top" src="./img/caisse1.png" alt="Card image cap">
@@ -119,7 +119,7 @@
 			</a>
 		</div>
 		
-		<div class="item guitare col-lg-4 col-md-4 col-6 col-sm">
+		<div class="item guitare col-lg-4 col-md-6 col-sm-12">
 			<a href="?page=instrument" target="_blank" class="guitare">	
 			<div class="card" style="width: 18rem;">
 				<img class="card-img-top" src="./img/guitare3.png" alt="Card image cap">
@@ -140,7 +140,7 @@
 			</a>
 		</div>
 		
-		<div class="item guitare col-lg-4 col-md-4 col-6 col-sm">
+		<div class="item guitare col-lg-4 col-md-6 col-sm-12">
 			<a href="?page=instrument" target="_blank" class="guitare">	
 			<div class="card" style="width: 18rem;">
 				<img class="card-img-top" src="./img/guitare2.png" alt="Card image cap">
@@ -161,7 +161,7 @@
 			</a>
 		</div>
 		
-		<div class="item caisse col-lg-4 col-md-4 col-6 col-sm">
+		<div class="item caisse col-lg-4 col-md-6 col-sm-12">
 			<a href="?page=instrument" target="_blank" class="guitare">
 			<div class="card" style="width: 18rem;">
 				<img class="card-img-top" src="./img/caisse3.png" alt="Card image cap">

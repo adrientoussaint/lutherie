@@ -61,6 +61,19 @@ function erreur()
     require('./page/erreur.php');
 }
 
+function mentions()
+{
+    // $posts = getPosts();
+
+    require('./page/ml.php');
+}
+function politique()
+{
+    // $posts = getPosts();
+
+    require('./page/politique.php');
+}
+
 // function post()
 // {
 //     $post = getPost($_GET['id']);

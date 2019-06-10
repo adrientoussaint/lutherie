@@ -53,6 +53,10 @@
 					devis();
 				}elseif($_GET['page'] == 'erreur'){
 					erreur();
+				}elseif($_GET['page'] == 'mentions'){
+					mentions();
+				}elseif($_GET['page'] == 'politique'){
+					politique();
 				}
 			}
 			else {
@@ -112,6 +116,12 @@
 					});
 					
 					
+				// Fitres custom - choix modèle
+					$('div.part2').on("click",function (){
+						$('div.bois-corps').hide();
+					});
+				
+					
 					
 				//Filtres Custom
 				$("div.bhoechie-tab-menu>div.list-group>a").click(function(e) {
@@ -123,14 +133,6 @@
 					$("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
 				});
 					
-				$("div.bhoechie-tab-menu>div.list-group>a").click(function(e) {
-					e.preventDefault();
-					$(this).siblings('a.active').removeClass("active");
-					$(this).addClass("active");
-					var index = $(this).index();
-					$("div.bhoechie-tab>div.bhoechie-tab-content2").removeClass("active");
-					$("div.bhoechie-tab>div.bhoechie-tab-content2").eq(index).addClass("active");
-				});
 				
 				// récupérer la date au format dd/mm/yyyy
 				function convertDate(inputFormat) {
@@ -196,6 +198,7 @@
 						calcTotal(total, price,0);
 						// on change la nouvelle valeure en tant qu'ancienne (vu que c'est la dernière cliquée)
 						localStorage.setItem("oldValModele", price);
+						$('#monImageModele').attr('src','img/'+img+'.png');
 						
 					
 					}else if($(this).hasClass('radioBoisCorps')){
@@ -236,8 +239,6 @@
 						localStorage.setItem("oldValGravure", price);
 						//$('#monImage').attr('src','img/basse1.jpg');
 					}
-					
-					
 					
 					$('#price').text(localStorage.getItem("total"));
 				});

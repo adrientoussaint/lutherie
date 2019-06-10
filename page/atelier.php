@@ -1,9 +1,9 @@
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="./img/header-atelier.jpg" class="w-100 hidden-md-down" alt="header atelier">
-	  <img src="https://via.placeholder.com/728x350.png" class="w-100 hidden-sm-down hidden-lg-up" alt="header atelier">
-	  <img src="https://via.placeholder.com/728x250.png" class="w-100  hidden-md-up" alt="header atelier">
+      <img src="./img/header-atelier.jpg" class="w-100 d-none d-lg-block d-xl-block" alt="header atelier">
+	  <img src="./img/header-atelier-tablette.jpg" class="w-100 d-none d-md-block d-lg-none" alt="header atelier">
+	  <img src="./img/header-atelier-mobile.jpg" class="w-100 d-sm-block d-xs-block d-md-none" alt="header atelier">
     </div>
   </div>
   

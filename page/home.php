@@ -1,7 +1,7 @@
 <!--------- CARROUSEL WEB------------>
 
 <div class="carousel-un">
-  <div id="carousel-slide" class="carousel slide" data-ride="carousel">
+  <div id="carousel-slide" class="carousel slide d-none d-lg-block d-xl-block" data-ride="carousel">
 
     <!-- Indicators -->
     <ul class="carousel-indicators">
@@ -69,7 +69,7 @@
 <!--------- CARROUSEL TABLETTE------------>
 
 <div class="carousel-deux">
-  <div id="carousel-slide-tablette" class="carousel slide" data-ride="carousel">
+  <div id="carousel-slide-tablette" class="carousel slide d-none d-md-block d-lg-none" data-ride="carousel">
 
     <!-- Indicators -->
     <ul class="carousel-indicators">
@@ -137,7 +137,7 @@
 
 <!--------- CARROUSEL TELEPHONE------------>
 <div class="carousel-trois">
-  <div id="carousel-slide-phone" class="carousel slide" data-ride="carousel">
+  <div id="carousel-slide-phone" class="carousel slide d-sm-block d-xs-block d-md-none" data-ride="carousel">
 
     <!-- Indicators -->
     <ul class="carousel-indicators">
