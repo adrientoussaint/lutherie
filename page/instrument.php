@@ -119,36 +119,38 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-		<form class="contact-form row reserv-form" id="reservForm" action="" method="post">
+		<form class="" id="reservForm" action="" method="post">
 		  <div class="modal-body">
 				<div class="info-reserv">
 					<span>Pour reserver l'instrument, merci de remplir les champs d'informations ci-dessous afin que nous puissons vous recontacter.</span>
 				</div>
 
-			   <div class="form-reserv">
+			   <div class="form-reserv contact-form">
+                    <div class="row">
+                        <div class="form-field col-lg-6">
+                            <input id="nom" name="nom" class="input-text js-input" type="text" required>
+                            <label class="label" for="nom">Nom</label>
+                        </div>
+                        <div class="form-field col-lg-6">
+                            <input id="prenom" name="prenom" class="input-text js-input" type="text" required>
+                            <label class="label" for="prenom">Prénom</label>
+                        </div>
+                    </div>
+                    <div class="row">              
+                        <div class="form-field col-lg-6 ">
+                            <input id="email" name="email" class="input-text js-input" type="email" required>
+                            <label class="label" for="email">E-mail</label>
+                        </div>
+                        <div class="form-field col-lg-6 ">
+                            <input id="phone" name="phone" class="input-text js-input" type="text">
+                            <label class="label" for="phone">Numéro de téléphone</label>
+                        </div>
+                    </div>
 
-				  <div class="form-field col-lg-6">
-					 <input id="nom" name="nom" class="input-text js-input" type="text" required>
-					 <label class="label" for="nom">Nom</label>
-				  </div>
-				  <div class="form-field col-lg-6">
-					 <input id="prenom" name="prenom" class="input-text js-input" type="text" required>
-					 <label class="label" for="prenom">Prénom</label>
-				  </div>
-				  <div class="form-field col-lg-6 ">
-					 <input id="email" name="email" class="input-text js-input" type="email" required>
-					 <label class="label" for="email">E-mail</label>
-				  </div>
-				  <div class="form-field col-lg-6 ">
-					 <input id="phone" name="phone" class="input-text js-input" type="text">
-					 <label class="label" for="phone">Numéro de téléphone</label>
-				  </div>
-
-				  <div class="form-field col-lg-12">
+				    <div class="form-field col-lg-12">
 					  <textarea id="message" name="message" class="input-text-message js-input" type="text" rows="10" required></textarea>
 					  <label class="label label-message" for="message"><span>Message</span></label>
-				  </div>
-				
+                </div>
 
 			   </div>
 			  <div class="" id="sucess-reserv">
