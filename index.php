@@ -150,11 +150,15 @@
 					
 					
 				//Filtres Custom
-				$("div.bhoechie-tab-menu>div.list-group>a").click(function(e) {
+				$("div.bhoechie-tab-menu .list-group a").click(function(e) {
 					e.preventDefault();
 					$(this).siblings('a.active').removeClass("active");
 					$(this).addClass("active");
 					var index = $(this).index();
+					if($(this).data("index") != undefined){
+						index = $(this).data("index");
+					}
+					console.log(index);
 					// si la classe Menu2IsActive est sur  les options du menu
 					if($(this).hasClass("menu2IsActive")){
 						// si le a cliqué n'a pas l'id modele
@@ -222,7 +226,7 @@
 					var img = $(this).data("img");
 					console.log(img);
 					var modele = "modele1";
-					if($("div.bhoechie-tab-menu>div.list-group>a").hasClass("menu2IsActive")){
+					if($("div.bhoechie-tab-menu .list-group a").hasClass("menu2IsActive")){
 						modele = "modele2";
 					}else{
 						modele = "modele1";
@@ -242,7 +246,7 @@
 						localStorage.setItem("oldValModele", price);
 						if($(this).attr("id") == "radio2"){
 							$("#pickguard>span").text('Peinture');
-							$("div.bhoechie-tab-menu>div.list-group>a").addClass("menu2IsActive");
+							$("div.bhoechie-tab-menu .list-group a").addClass("menu2IsActive");
 							$(".menu-1").css('visibility', "hidden");
 							$(".menu-2").css('visibility', "visible");
 							$('#monImageCouleur').css('visibility', 'hidden');
@@ -252,7 +256,7 @@
 							$('#monImageTete').attr('src', 'img/modele2/part111.png');
 							$('#monImageCouleur').attr('src', 'img/modele2/part1.png');
 						}else{
-							$("div.bhoechie-tab-menu>div.list-group>a").removeClass("menu2IsActive");
+							$("div.bhoechie-tab-menu .list-group a").removeClass("menu2IsActive");
 							$("#pickguard>span").text('Pickguard');
 							$(".menu-1").css('visibility', "visible");
 							$(".menu-2").css('visibility', "hidden");
