@@ -37,23 +37,23 @@
 		    <label class="label objet" for="objet">Objet du mail</label>
 			
 		   <div class="checkbox">
-			<input type="checkbox" id="devis" name="devis">
-			<label for="devis">Devis</label>
-		
-			<input type="checkbox" id="informations" name="informations">
-			<label for="informations">Customisation</label>
+				<input type="checkbox" class="subject" id="devis" name="devis">
+				<label for="devis">Devis</label>
 			
-			<input type="checkbox" id="reservation" name="reservation">
-			<label for="reservation">Réservation</label>
-		
-			<input type="checkbox" id="reparation" name="reparation">
-			<label for="reparation">Réparation</label>
+				<input type="checkbox" class="subject" id="informations" name="informations">
+				<label for="informations">Customisation</label>
+				
+				<input type="checkbox" class="subject" id="reservation" name="reservation">
+				<label for="reservation">Réservation</label>
 			
-			<input type="checkbox" id="autre" name="autre">
-			<label for="autre">Autre</label>
-			<input type="hidden" name="subject">
-		</div>
-	  </div>
+				<input type="checkbox" class="subject" id="reparation" name="reparation">
+				<label for="reparation">Réparation</label>
+				
+				<input type="checkbox" class="subject" id="autre" name="autre">
+				<label for="autre">Autre</label>
+				<input type="hidden" name="objet" id="objet">
+			</div>
+	  	</div>
 	   
 	   
       <div class="form-field col-lg-12">
@@ -72,7 +72,18 @@
 	</div>
 </section>
 <script>
-	
+	var arraySubject = [];
+	$(".subject").on('click', function(){
+		var indexTab = arraySubject.indexOf($(this).attr("name"))
+		if( indexTab === -1){
+			arraySubject.push($(this).attr("name"));
+		}else{
+			arraySubject.splice(indexTab, 1);
+		}
+		$("#objet").val(arraySubject);
+		console.log($("#objet").val());
+	})
+
 	$("#contactForm").on("submit", function(e){
 		e.preventDefault();
 		var nom = $('#nom').val();
