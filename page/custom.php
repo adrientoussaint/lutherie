@@ -810,6 +810,7 @@
 <script>
 if (window.matchMedia("(min-width: 680px)").matches) {
   	$('#shopMobile').remove();
+	/* L'affichage est supérieur à 600px de large */
 } else {
 	$('#shop').remove();
   /* L'affichage est inférieur à 600px de large */
