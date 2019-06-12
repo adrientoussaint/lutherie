@@ -161,6 +161,7 @@ div.lg-atelier-text{ width: 75%;}
 	font-weight: bold;
 	padding-top: 50px;
 	padding-bottom: 30px;
+	color: black;
 }
 
 .service a:hover{
@@ -179,9 +180,10 @@ div.lg-atelier-text{ width: 75%;}
 	font-size: 1em;
 	font-weight: bold;
 	padding:15px 0px;
+	color: black;
 }
 
-.service p{font-size:14px;}
+.service p{font-size:14px; color: black;}
 
 .rotate div img {
   -webkit-transition: all 0.5s ease;
@@ -579,9 +581,7 @@ div.bhoechie-tab-menu, div.bhoechie-tab-container{ display: inline-flex;}
 
 .gravure .form-custom{background-color: #E2D5C5;}
 
-
-div.form-field-custom{	display: none;}
-
+div.form-field-custom{display: none;}
 
 
 

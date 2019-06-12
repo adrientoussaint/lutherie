@@ -7,7 +7,7 @@
 			<title>Woove</title>
 			
 			<link rel="stylesheet" href="style.css">
-			
+			<link rel="shortcut icon" type="image/png" href="/img/favicon.png"/>
 			
 			<!--bootstrap + js -->
 			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -242,21 +242,42 @@
 						localStorage.setItem("oldValModele", price);
 						if($(this).attr("id") == "radio2"){
 							$("#pickguard>span").text('Peinture');
+							$(".recap-peinture").text('Peinture : ');
 							$("div.bhoechie-tab-menu>div.list-group>a").addClass("menu2IsActive");
 							$(".menu-1").css('visibility', "hidden");
 							$(".menu-2").css('visibility', "visible");
 							$('#monImageCouleur').css('visibility', 'hidden');
+							
+							$(".menu-2.manche").on("click", function(){
+								$('#monImageCouleur').css('visibility', "visible");
+							})
+							
+							
+							$("#recap-bois-corps").text('Hêtre');
+							$("#recap-bois-manche").text('Hêtre');
+							$("#recap-bois-tete").text('Hêtre');
+							$("#recap-couleur").text('Non');
+							$("#recap-gravure").text('Non');
+							
 							modele = "modele2";
 							$('#monImageCorps').attr('src', 'img/modele2/part1.png');
 							$('#monImageManche').attr('src', 'img/modele2/part11.png');
 							$('#monImageTete').attr('src', 'img/modele2/part111.png');
-							$('#monImageCouleur').attr('src', 'img/modele2/part1.png');
+							$('#monImageCouleur').attr('src', 'img/modele2/part1111.png');
 						}else{
 							$("div.bhoechie-tab-menu>div.list-group>a").removeClass("menu2IsActive");
 							$("#pickguard>span").text('Pickguard');
+							$(".recap-peinture").text('Pickguard : ');
 							$(".menu-1").css('visibility', "visible");
 							$(".menu-2").css('visibility', "hidden");
 							$('#monImageCouleur').css('visibility', 'visible');
+							
+							$("#recap-bois-corps").text('Noyer');
+							$("#recap-bois-manche").text('Wengé');
+							$("#recap-bois-tete").text('Wengé');
+							$("#recap-couleur").text('Rouge');
+							$("#recap-gravure").text('Non');
+							
 							modele = "modele1";
 							$('#monImageCorps').attr('src', 'img/modele1/part1.png');
 							$('#monImageManche').attr('src', 'img/modele1/part11.png');
@@ -338,14 +359,7 @@
 						}
 					});
 					
-					
-			
-					
 				});
-				
-	
-			
-	
 			</script>	
 			
 		
