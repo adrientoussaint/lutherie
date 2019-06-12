@@ -7,7 +7,8 @@ $phone=$_POST['phone'];
 $text=$_POST['message'];
 
 $to = "claudie.lesoudard@gmail.com";
-$objet = $_POST['objet'];
+// $to = "adrien-toussaint@hotmail.fr";
+$objet = isset($_POST['objet']) ? $_POST['objet'] : "Mail depuis le site Woove";
 
 $message="<html><head></head><body><h1>Vous avez reçu un mail depuis le site Woove. </h1><br><br><p>Nom : ".$nom."</p> <br><p> Prenom : ".$prenom."</p><br><p> Mail : ".$email."</p> <br><p> Téléphone: ".$phone."</p> <br> <p>Objet(s) du mail : ".$objet."</p> <br><p> Message : ".$text."</p></body></html>";
 
