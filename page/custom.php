@@ -824,35 +824,6 @@ if (window.matchMedia("(min-width: 1024px)").matches) {
 }
 
 $("#generate").on("click", function(){
-	var values = { "products":
-					{
-					"BoisCorps": parseFloat(localStorage.getItem("oldValBoisCorps")),
-					"BoisManche": parseFloat(localStorage.getItem("oldValBoisManche")),
-					"BoisTete": parseFloat(localStorage.getItem("oldValBoisTete")),
-					"Couleur": parseFloat(localStorage.getItem("oldValCouleur")),
-					"Gravure": parseFloat(localStorage.getItem("oldValGravure")),
-					"Modele": parseFloat(localStorage.getItem("oldValModele"))
-					},
-					"total": parseFloat(localStorage.getItem("total")),
-					"ref": localStorage.getItem("ref"),
-					"nb": parseFloat(localStorage.getItem("nb")),
-				};
-	$.ajax({
-		type:'POST',
-		url: "./element/devis/index.php",
-		dataType: "json",
-		data:{val: values},
-		success:function(data){
-
-			window.location.href = 'http://localhost:8888/lutherie/?page=devis';
-			if(data.status == '200'){
-			}else{
-				alert('Erreur lors de la génération du devis')
-			} 
-		},
-		error:function(data){
-			window.location.href = 'http://localhost:8888/lutherie/?page=devis';
-		}
-	})
+	window.location.href = 'http://localhost:8888/lutherie/?page=devis';
 });
 </script>
