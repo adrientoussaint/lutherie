@@ -1,11 +1,13 @@
 <div class="container">
-<div>NUNUNU</div>
- <iframe src="" id="iframeDevis" frameborder="0"></iframe>
+
+    <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" id="iframeDevis" src="" allowfullscreen></iframe>
+    </div>
 </div>
 <script>
     $(document).ready(function(){
         
-           $('#iframeDevis').attr('src','./pdf/'+localStorage.getItem("ref")+'.pdf' )
+           $('#iframeDevis').attr('src','http://localhost/lutherie/pdf/'+localStorage.getItem("ref")+'.pdf' )
         });
 </script>
 				
